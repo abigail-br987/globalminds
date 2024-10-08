@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold font-lucidity; 
+  }
+  h2 {
+    @apply text-3xl font-bold uppercase tracking-wide; 
+  }
+  h3 {
+    @apply text-2xl font-bold tracking-wide; 
+  }
+  body {
+    @apply font-mono
+  }
+}
+
+@font-face {
+  font-family: 'Lucidity';
+  src: url('./src/assets/lucidity.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GotaRegular';
+  src: url('./src/assets/gotaregular3.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'GotaLight';
+  src: url('./src/assets/gotalight.ttf') format('truetype');
+  font-style: normal;
+}
