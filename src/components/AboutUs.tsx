@@ -1,9 +1,17 @@
+import { motion } from "framer-motion";
+import { animations } from "./animations/animations";
 function AboutUs() {
   return (
     <>
-      <div className="flex items-center">
-        <div className="bg-gbYellow max-w-3xl p-10 rotate space-y-4 m-3 -rotate-1 rounded-lg">
-          <h2>¿Quiénes Somos? </h2>
+      <motion.div
+        className="flex flex-col md:flex-row items-center w-full p-6"
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true }}
+        variants={animations.sectionVariant}
+      >
+        <div className="bg-gbYellow p-8 md:p-10 rotate space-y-4 m-3 -rotate-1 rounded-lg w-full md:w-1/2">
+          <h2>¿Quiénes Somos?</h2>
           <p>
             Global Minds es una organización juvenil creada para empoderar a
             jóvenes latinos, proporcionando acceso a recursos, conexiones y
@@ -13,18 +21,20 @@ function AboutUs() {
             sus metas educativas y profesionales en el extranjero.
           </p>
         </div>
-        <div className="relative w-96 h-96">
+        <div className="relative w-full md:w-1/2 h-64 md:h-96">
           <img
             className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg
-             transform translate-x-10 translate-y-10 rotate-6 border-gbYellow border-[10px]"
+             transform translate-x-0 md:translate-x-10 translate-y-5 md:translate-y-10 rotate-3 md:rotate-6 border-gbYellow border-[10px]"
             src="https://placehold.co/600x400"
+            alt="Description"
           />
           <img
-            className="absolute inset-0 w-full h-full -translate-x-10 border-gbYellow border-[10px] object-cover rounded-lg shadow-lg"
+            className="absolute inset-0 w-full h-full -translate-x-5 md:-translate-x-10 border-gbYellow border-[10px] object-cover rounded-lg shadow-lg"
             src="https://placehold.co/600x400"
+            alt="Description"
           />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
