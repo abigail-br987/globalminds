@@ -1,7 +1,16 @@
+import { motion } from "framer-motion";
+import { animations } from "./animations/animations";
+
 function Mission() {
   return (
-    <div className="flex items-end justify-center">
-      <div className="relative w-96 h-52">
+    <motion.div
+      className="flex flex-col md:flex-row items-end justify-center w-full p-6"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{once: true }}
+      variants={animations.sectionVariant}
+    >
+      <div className="relative hidden w-full md:block md:w-1/2 h-64 md:h-52">
         <img
           className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg
      transform -translate-x-16 translate-y-10 -rotate-6 border-gbGreen border-[10px]"
@@ -13,7 +22,7 @@ function Mission() {
         />
       </div>
 
-      <div className="max-w-3xl text-gbWhite  rotate space-y-4 ">
+      <div className="text-gbWhite space-y-4 m-3 text-center md:text-left rotate-1 rounded-lg w-full md:w-1/2 ">
         <h2>Nuestra Misión </h2>
         <p>
           Nuestra misión es crear una plataforma donde los jóvenes puedan
@@ -22,7 +31,7 @@ function Mission() {
           oportunidades de muchos.
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
