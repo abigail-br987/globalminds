@@ -5,7 +5,7 @@ import Figure3 from "../svg/Figure3";
 function Structure() {
   return (
     <>
-      <div className="text-center my-5 mt-36 text-gbWhite">
+      <div className="text-center my-5 mt-20 text-gbWhite">
         <span className="bg-gbWhite tracking-wider px-10 text-4xl font-bold py-2 rounded-full text-gbBlack">
           <span className="text-gbBlue">S</span>
           <span className="text-gbRed">T</span>
