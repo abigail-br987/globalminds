@@ -1,7 +1,5 @@
 import LogoBrain from "../svg/LogoBrain";
 import { motion } from "framer-motion";
-import { useScroll } from "framer-motion";
-import { useTransform } from "framer-motion";
 import { animations } from "./animations/animations";
 
 function Landing() {
