@@ -9,7 +9,7 @@ const navItems = [
 
 function NavBar() {
   return (
-    <nav className="p-2 fixed  w-full top-0 z-20 bg-gbBlack">
+    <nav className="p-2 fixed  w-full top-0 z-20">
       <ul className="items-start flex justify-between">
         <Link
           activeClass="active"
@@ -24,7 +24,7 @@ function NavBar() {
           </div>
         </Link>
 
-        <div className="flex md:space-x-4 p-3">
+        <div className="flex md:space-x-4 p-3 bg-gbBlack z-0 rounded-md px-3">
           {navItems.map((item, index) => (
             <li
               key={index}
