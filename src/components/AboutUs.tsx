@@ -4,7 +4,7 @@ function AboutUs() {
   return (
     <>
       <motion.div
-        className="flex flex-col md:flex-row items-center w-full p-6"
+        className="flex flex-col md:flex-row items-center w-full"
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true }}
@@ -24,12 +24,7 @@ function AboutUs() {
         <div className="relative w-full md:w-1/2 h-64 md:h-96">
           <img
             className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg
-             transform translate-x-0 md:translate-x-10 translate-y-5 md:translate-y-10 rotate-3 md:rotate-6 border-gbYellow border-[10px]"
-            src="https://placehold.co/600x400"
-            alt="Description"
-          />
-          <img
-            className="absolute inset-0 w-full h-full -translate-x-5 md:-translate-x-10 border-gbYellow border-[10px] object-cover rounded-lg shadow-lg"
+             transform translate-x-0 md:translate-x-8 translate-y-5 md:translate-y-8 rotate-2 md:rotate-4 border-gbYellow border-[10px]"
             src="https://placehold.co/600x400"
             alt="Description"
           />
