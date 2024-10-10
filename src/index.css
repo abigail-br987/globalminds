@@ -16,6 +16,13 @@
   h3 {
     @apply text-lg font-bold tracking-wide; 
   }
+  h4 {
+    @apply text-base font-semibold tracking-wide; 
+  }
+  button {
+    @apply px-4 py-1 my-2 bg-gbRed rounded; 
+  }
+
   body {
     @apply font-mono
   }
@@ -23,19 +30,19 @@
 
 @font-face {
   font-family: 'Lucidity';
-  src: url('./src/assets/lucidity.ttf') format('truetype');
+  src: url('./src/assets/fonts/lucidity.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'GotaRegular';
-  src: url('./src/assets/gotaregular3.ttf') format('truetype');
+  src: url('./src/assets/fonts/gotaregular3.ttf') format('truetype');
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'GotaLight';
-  src: url('./src/assets/gotalight.ttf') format('truetype');
+  src: url('./src/assets/fonts/gotalight.ttf') format('truetype');
   font-style: normal;
 }
