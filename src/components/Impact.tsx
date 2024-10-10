@@ -1,7 +1,6 @@
 import ColorfulTitle from "./small_components/ColorfulTitle";
 import { impactData } from "../assets/script/content";
 import { FaArrowRightLong } from "react-icons/fa6";
-
 function Impact() {
   return (
     <div className="mt-10 hyphens-auto text-gbWhite space-y-6">
