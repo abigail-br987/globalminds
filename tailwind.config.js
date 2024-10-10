@@ -13,7 +13,7 @@ export default {
         gbBlue: '#2D96A2',
         gbBlack: '#2B2B2B',
         gbWhite: '#F8F8F8',
-        gbYellow: '#fbd261',
+        gbYellow: '#eab72c',
       },
       fontFamily: {
         mono: ['Fira Code', 'monospace'],
