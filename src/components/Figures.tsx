@@ -86,11 +86,11 @@ function Figures() {
   return (
 
     <div className=" fixed flex justify-center 
-     items-center h-screen w-full -top-10">
+     items-center h-screen w-full -top-10 z-0">
       {figures.map(({ Component, className, className2, color }, index) => {
-        const rotate = useTransform(scrollY, [0, 1000], [0, -20]);
-        const scale = useTransform(scrollY, [0, 1000], [1, 1.2]);
-        const opacity = useTransform(scrollY, [0, 1000], [1, 0.01]);
+        const rotate = useTransform(scrollY, [0, 2600], [0, -20]);
+        const scale = useTransform(scrollY, [0, 2600], [1, 1.2]);
+        const opacity = useTransform(scrollY, [0, 2600], [1, 0.01]);
         return (
           <motion.span
             key={index}
