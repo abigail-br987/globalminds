@@ -6,7 +6,7 @@ function Donate() {
       <div className="flex-shrink-0 basis-1/6 max-lg:hidden">
         <img src={logo} className="w-full h-full object-cover" />
       </div>
-      <div className="pl-6 flex-shrink">
+      <div className="lg:pl-6 flex-shrink">
         <h2>Donar</h2>
         <ul>
           {donateMessage.map((message, index) => (
