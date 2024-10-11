@@ -1,4 +1,3 @@
-import { BsSquareFill } from "react-icons/bs";
 import logo from "/logo/mainlogo.png";
 import { FaSquareFull } from "react-icons/fa6";
 import NavBar from "../components/NavBar";
