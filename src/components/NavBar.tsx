@@ -24,7 +24,7 @@ function NavBar() {
           </div>
         </Link>
 
-        <div className="flex md:space-x-4 p-3 bg-gbBlack z-0 rounded-md px-3">
+        <div className="flex space-x-2 md:space-x-4 p-3 bg-gbBlack z-0 rounded-md px-3">
           {navItems.map((item, index) => (
             <li
               key={index}
