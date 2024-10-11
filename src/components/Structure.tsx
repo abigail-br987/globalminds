@@ -3,12 +3,19 @@ import ColorfulTitle from "./small_components/ColorfulTitle";
 function Structure() {
   return (
     <>
-      <div className="text-center my-5 mt-20 text-gbWhite flex flex-col items-center">
-        <ColorfulTitle text="STRUCTURE"/>
-        <div className="grid grid-cols-1 md:grid-cols-2 mt-10 text-center gap-14">
+      <div className="text-center my-5  text-gbWhite flex flex-col items-center">
+        <ColorfulTitle text="STRUCTURE" />
+        <div className="grid grid-cols-1 md:grid-cols-2 text-center">
           {structureItems.map((item, index) => (
-            <div className="relative" key={index}>
-              <div className="flex items-center justify-center mb-5">
+            <div
+              className={`relative py-6 px-3 
+       ${index === 0 ? "border-b border-r" : ""} 
+       ${index === 1 ? "border-b" : ""} 
+       ${index === 2 ? "border-r" : ""} 
+       border-gbWhite`}
+              key={index}
+            >
+              <div className="flex items-center justify-center">
                 <h3 className="z-10">{item.title}</h3>
                 {item.figure}
               </div>
