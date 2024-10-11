@@ -8,6 +8,7 @@ import Figures from "../components/Figures";
 import JoinUs from "../components/JoinUs";
 import Donate from "../components/Donate";
 import Impact from "../components/Impact";
+import Footer from "../components/Footer";
 import OurTeam from "../components/OurTeam";
 function Home() {
   return (
@@ -23,15 +24,11 @@ function Home() {
       <Structure />
       <JoinUs />
       <Donate />
-      <Impact /> </div>
-      <OurTeam/>
-      <Structure />
+      <Impact /> 
+      </div>
 
-      <Structure />
+      <Footer/>
 
-      <Structure />
-
-     
     </div>
   );
 }
