@@ -8,11 +8,10 @@ function Nosotros() {
     <div className="bg-gbBlack">
       <NavBar />
       <div className="max-w-screen-xl p-10 z-10 flex flex-col items-center justify-center m-auto">
-        <h1>NUESTRO EQUIPO</h1>
+        <h1 className="max-lg:text-5xl">NUESTRO EQUIPO</h1>
         <OurTeam/>
       </div>
       <FollowUs/>
-
       <Footer />
     </div>
   );
