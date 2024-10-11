@@ -10,12 +10,11 @@ function OurTeam() {
   return (
     <div className="bg-gbBlack">
       <div className="max-w-screen-xl p-10 z-10 flex m-auto">
-        <div className="flex justify-between w-full">
-          <div className="space-y-3 text-gbWhite pr-10">
+        <div className=" md:flex justify-between w-full">
+          <div className="max-md:hidden space-y-3 text-gbWhite pr-10">
             {ourTeamParagraph.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
-
             {teamMembers.map((member, index) => {
               const isSelected = selectedMember === index;
               const textColor = isSelected
