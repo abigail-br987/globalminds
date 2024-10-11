@@ -7,7 +7,7 @@ function Photo() {
   return (
     <>
       <motion.div
-        className="mt-10 relative"
+        className="mt-10 md:flex"
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true }}
@@ -20,7 +20,12 @@ function Photo() {
         />
         <Figure3 className="absolute h-10 left-1/3 bottom-10 z-10" />
         <img
-          className="object-cover rounded-lg shadow-lg w-full aspect-[16/6]
+          className="object-cover rounded-lg shadow-lg w-full rotate-1 scale-95
+              border-gbBlue border-[10px]"
+          src="https://placehold.co/600x400"
+        />
+        <img
+          className="object-cover rounded-lg shadow-lg w-full -rotate-1
               border-gbBlue border-[10px]"
           src="https://placehold.co/600x400"
         />
