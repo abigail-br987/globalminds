@@ -14,6 +14,12 @@ export default {
         gbBlack: '#2B2B2B',
         gbWhite: '#F8F8F8',
         gbYellow: '#eab72c',
+        gsLightBlue: '#ADDAE9',
+        gsLightPurple: '#ADA3DA',
+        gsBrightPink: '#F34F87',
+        gsPink: '#F678BE',
+        gsLightYellow: '#FBD160',
+        gsYellow: '#FBD160'
       },
       fontFamily: {
         mono: ['Fira Code', 'monospace'],
