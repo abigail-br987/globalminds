@@ -3,11 +3,11 @@ import { impactData } from "../assets/script/content";
 import { FaArrowRightLong } from "react-icons/fa6";
 function Impact() {
   return (
-    <div className="mt-10 hyphens-auto text-gbWhite space-y-6">
+    <div className="hyphens-auto text-gbWhite space-y-6">
       <div className="relative flex items-center justify-center w-full">
-        <ColorfulTitle text="IMPACT" />
-        <button className="absolute right-0 bg-gbBlue text-white px-4 py-2 rounded-full hover:bg-gbDarkBlue">
-          Testimonios{" "}
+        <ColorfulTitle text="IMPACTO" />
+        <button className="absolute group right-0 bg-gbBlue text-white px-4 py-2 rounded-full hover:bg-gbDarkBlue">
+          Testimonios
           <FaArrowRightLong className="inline-block group-hover:ml-5 transition-all" />
         </button>
       </div>
