@@ -20,7 +20,7 @@
     @apply text-base font-semibold tracking-wide; 
   }
   button {
-    @apply px-4 py-1 my-2 bg-gbRed rounded; 
+    @apply px-4 py-1 my-2 bg-gbRed rounded-full; 
   }
 
   body {
