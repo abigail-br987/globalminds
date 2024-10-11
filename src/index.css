@@ -30,19 +30,19 @@
 
 @font-face {
   font-family: 'Lucidity';
-  src: url('./src/assets/fonts/lucidity.ttf') format('truetype');
+  src: url('/fonts/lucidity.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'GotaRegular';
-  src: url('./src/assets/fonts/gotaregular3.ttf') format('truetype');
+  src: url('/fonts/gotaregular3.ttf') format('truetype');
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'GotaLight';
-  src: url('./src/assets/fonts/gotalight.ttf') format('truetype');
+  src: url('/fonts/gotalight.ttf') format('truetype');
   font-style: normal;
 }
