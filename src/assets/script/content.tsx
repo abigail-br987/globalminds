@@ -5,7 +5,7 @@ export const aboutUsContent = [
   {
     title: "¿Quiénes Somos?",
     description:
-      "Global Minds es una organización juvenil creada para empoderar a jóvenes latinos, proporcionando acceso a recursos, conexiones y mentoría personalizada. Creemos que el éxito individual puede multiplicarse para el beneficio de la comunidad, por lo que ofrecemos asesoría gratuita para apoyar a los estudiantes a lograr sus metas educativas y profesionales en el extranjero.",
+      "Somos una organización juvenil que empodera jóvenes latinos, proporcionando acceso a recursos, conexiones y mentoría personalizada. Creemos que el éxito individual puede multiplicarse para el beneficio de la comunidad, por lo que ofrecemos asesoría gratuita para apoyar a los estudiantes a lograr sus metas educativas y profesionales en el extranjero.",
   },
 ];
 export const missionContent = [
@@ -93,7 +93,10 @@ export const structureItems = [
     description:
       "Charlas semanales con latinos exitosos para inspirar a los estudiantes y ayudarles a definir sus metas.",
     figure: (
-      <Figure11 color="gbGreen" className="w-10 absolute -rotate-45 z-0 opacity-50" />
+      <Figure11
+        color="gbGreen"
+        className="w-10 absolute -rotate-45 z-0 opacity-50"
+      />
     ),
   },
   {
@@ -101,14 +104,22 @@ export const structureItems = [
     description:
       "Mentoría personalizada para guiar a los estudiantes en sus aplicaciones a concursos, becas y universidades.",
     figure: (
-      <Figure12 color="gbBlue" className="w-10 absolute -rotate-45 z-0 opacity-50" />
+      <Figure12
+        color="gbBlue"
+        className="w-10 absolute -rotate-45 z-0 opacity-50"
+      />
     ),
   },
   {
     title: "Preparar",
     description:
       "Talleres y capacitaciones para fortalecer los currículums y preparar a los estudiantes para actividades relevantes.",
-    figure: <Figure12 color="gbRed" className="w-10 absolute rotate-45 z-0 opacity-50" />,
+    figure: (
+      <Figure12
+        color="gbRed"
+        className="w-10 absolute rotate-45 z-0 opacity-50"
+      />
+    ),
   },
   {
     title: "Conectar",
@@ -229,3 +240,8 @@ export const teamMembers = [
 ];
 
 export const globalMindsColors = ["gbRed", "gbBlue", "gbYellow", "gbGreen"];
+
+export const ourTeamParagraph = [
+  "Global Minds no sería posible sin el increíble equipo que lo hace funcionar día a día.",
+  "Cada uno trabaja arduamente para asegurar que nuestros estudiantes tengan acceso a las mejores oportunidades",
+];
