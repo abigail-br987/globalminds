@@ -28,7 +28,7 @@ function Footer() {
       <div className="text-right space-y-5">
         <h3>Apoya</h3>
         <p>Se parte de ________ fkefaewpfkewa kofpewkfopafkekfew</p>
-        <button>Dona Aquí</button>
+        <button className="bg-white text-gbBlack font-bold">Dona Aquí</button>
       </div>
     </div>
   );
