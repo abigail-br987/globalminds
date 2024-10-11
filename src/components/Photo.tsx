@@ -7,7 +7,7 @@ function Photo() {
   return (
     <>
       <motion.div
-        className="mt-10 md:flex"
+        className="md:flex"
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true }}
