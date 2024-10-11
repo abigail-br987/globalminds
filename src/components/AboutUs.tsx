@@ -1,17 +1,18 @@
 import { motion } from "framer-motion";
 import { animations } from "./animations/animations";
 import { aboutUsContent } from "../assets/script/content.tsx";
-
+import Star9sides from "../svg/Star9sides.tsx";
 function AboutUs() {
   return (
     <>
       <motion.div
-        className="md:grid max-md:space-y-8 max-md:block md:grid-cols-2 md:gap-10"
+        className="md:grid max-md:space-y-8 max-md:block md:grid-cols-2 md:gap-10 text-gbBlack"
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true }}
         variants={animations.sectionVariant}
       >
+        <Star9sides className="max-sm:hidden absolute -top-20 right-0 w-32 fill-gbGreen z-10"/>
         {aboutUsContent.map((item, index) => (
           <div
             key={index}
