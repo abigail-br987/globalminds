@@ -1,12 +1,7 @@
-import logo from "/logo/mainlogo.png";
-import { FaSquareFull } from "react-icons/fa6";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import { useState } from "react";
-import { teamMembers } from "../assets/script/content";
-import { globalMindsColors } from "../assets/script/content";
-import OurTeam from "./OurTeam";
-import FollowUs from "./FollowUs";
+import OurTeam from "../components/OurTeam";
+import FollowUs from "../components/FollowUs";
 function Nosotros() {
 
   return (
