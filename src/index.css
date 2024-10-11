@@ -8,10 +8,10 @@
 
 @layer base {
   h1 {
-    @apply text-6xl font-bold font-lucidity; 
+    @apply text-8xl font-bold font-lucidity; 
   }
   h2 {
-    @apply text-xl md:text-2xl font-semibold; 
+    @apply text-xl md:text-3xl font-semibold; 
   }
   h3 {
     @apply text-lg font-bold tracking-wide; 
@@ -22,9 +22,11 @@
   button {
     @apply px-4 py-1 my-2 bg-gbRed rounded-full; 
   }
-
+  p {
+    @apply leading-5
+  }
   body {
-    @apply font-mono
+    @apply font-mono text-gbWhite
   }
 }
 
