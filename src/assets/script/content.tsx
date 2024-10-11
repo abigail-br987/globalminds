@@ -93,7 +93,7 @@ export const structureItems = [
     description:
       "Charlas semanales con latinos exitosos para inspirar a los estudiantes y ayudarles a definir sus metas.",
     figure: (
-      <Figure11 color="gbGreen" className="w-10 absolute -rotate-45 z-0" />
+      <Figure11 color="gbGreen" className="w-10 absolute -rotate-45 z-0 opacity-50" />
     ),
   },
   {
@@ -101,20 +101,20 @@ export const structureItems = [
     description:
       "Mentoría personalizada para guiar a los estudiantes en sus aplicaciones a concursos, becas y universidades.",
     figure: (
-      <Figure12 color="gbBlue" className="w-10 absolute -rotate-45 z-0" />
+      <Figure12 color="gbBlue" className="w-10 absolute -rotate-45 z-0 opacity-50" />
     ),
   },
   {
     title: "Preparar",
     description:
       "Talleres y capacitaciones para fortalecer los currículums y preparar a los estudiantes para actividades relevantes.",
-    figure: <Figure12 color="gbRed" className="w-10 absolute rotate-45 z-0" />,
+    figure: <Figure12 color="gbRed" className="w-10 absolute rotate-45 z-0 opacity-50" />,
   },
   {
     title: "Conectar",
     description:
       "Crear una comunidad de apoyo y networking entre estudiantes y mentores para fomentar la colaboración y el intercambio de experiencias.",
-    figure: <Figure3 className="w-10 absolute -rotate-45 z-0" />,
+    figure: <Figure3 className="w-10 absolute -rotate-45 z-0 opacity-50" />,
   },
 ];
 export const impactData = [
@@ -139,3 +139,93 @@ export const impactData = [
     text: "crecimiento mensual en la participación",
   },
 ];
+
+export const teamMembers = [
+  {
+    name: "Name of Person 1",
+    position: "Position 1",
+    image: "",
+  },
+  {
+    name: "Name of Person 2",
+    position: "Position 2",
+    image: "",
+  },
+  {
+    name: "Name of Person 3",
+    position: "Position 3",
+    image: "",
+  },
+  {
+    name: "Name of Person 4",
+    position: "Position 4",
+    image: "",
+  },
+  {
+    name: "Name of Person 5",
+    position: "Position 1",
+    image: "",
+  },
+  {
+    name: "Name of Person 6",
+    position: "Position 2",
+    image: "",
+  },
+  {
+    name: "Name of Person 7",
+    position: "Position 3",
+    image: "",
+  },
+  {
+    name: "Name of Person 8",
+    position: "Position 4",
+    image: "",
+  },
+  {
+    name: "Name of Person 9",
+    position: "Position 1",
+    image: "",
+  },
+  {
+    name: "Name of Person 10",
+    position: "Position 2",
+    image: "",
+  },
+  {
+    name: "Name of Person 11",
+    position: "Position 3",
+    image: "",
+  },
+  {
+    name: "Name of Person 12",
+    position: "Position 4",
+    image: "",
+  },
+  {
+    name: "Name of Person 13",
+    position: "Position 1",
+    image: "",
+  },
+  {
+    name: "Name of Person 14",
+    position: "Position 2",
+    image: "",
+  },
+  {
+    name: "Name of Person 15",
+    position: "Position 3",
+    image: "",
+  },
+  {
+    name: "Name of Person 16",
+    position: "Position 4",
+    image: "",
+  },
+  {
+    name: "Name of Person 17",
+    position: "Position 4",
+    image: "",
+  },
+];
+
+export const globalMindsColors = ["gbRed", "gbBlue", "gbYellow", "gbGreen"];
