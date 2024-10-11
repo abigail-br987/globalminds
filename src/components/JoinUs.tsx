@@ -19,9 +19,9 @@ function JoinUs() {
   };
 
   return (
-    <>
+    <div>
       <h2 className="text-center text-gbWhite">Únete</h2>
-      <div className="mt-6 mb-10 space-y-4 rounded text-gbWhite">
+      <div className="mt-6 mb-10 space-y-4 rounded text-gbWhite hyphens-auto">
         <div className="sm:grid max-sm:space-y-8 max-sm:block grid-cols-2 gap-10">
           {joinOptions.map((option, index) => (
             <div
@@ -78,7 +78,7 @@ function JoinUs() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
