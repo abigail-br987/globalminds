@@ -34,8 +34,8 @@ function Nosotros() {
               return (
                 <div
                   key={index}
-                  className={`group cursor-pointer transition-all duration-300 py-${
-                    isSelected ? "3" : "" 
+                  className={`group cursor-pointer transition-all duration-300 ${
+                    isSelected ? "py-3 underline-offset-2 underline" : "" 
                   } opacity-${
                     isSelected ? "100" : "90" 
                   } text-${textColor}`}
