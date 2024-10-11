@@ -19,16 +19,22 @@ function Photo() {
           className="absolute h-10 right-3 top-20 z-10"
         />
         <Figure3 className="absolute h-10 left-1/3 bottom-10 z-10" />
-        <img
-          className="object-cover rounded-lg shadow-lg w-full rotate-1 scale-95
+        <div className="flex w-full">
+          <div>
+            <img
+              className="w-full h-full object-cover rounded-lg shadow-lg rotate-1 scale-95
               border-gbBlue border-[10px]"
-          src="https://placehold.co/600x400"
-        />
-        <img
-          className="object-cover rounded-lg shadow-lg w-full -rotate-1
+              src="https://placehold.co/600x400"
+            />
+          </div>
+          <div>
+            <img
+              className="w-full h-full object-cover rounded-lg shadow-lg -rotate-1
               border-gbBlue border-[10px]"
-          src="https://placehold.co/600x400"
-        />
+              src="https://placehold.co/600x400"
+            />
+          </div>
+        </div>
       </motion.div>
     </>
   );
