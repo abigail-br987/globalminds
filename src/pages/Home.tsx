@@ -9,26 +9,22 @@ import JoinUs from "../components/JoinUs";
 import Donate from "../components/Donate";
 import Impact from "../components/Impact";
 import Footer from "../components/Footer";
-import OurTeam from "../components/OurTeam";
 function Home() {
   return (
     <div className="flex flex-col justify-center items-center m-auto bg-gbBlack">
       <NavBar />
       <Figures />
-      <Landing />      
-
-      <div className="max-w-screen-xl pb-20 p-6 z-10">
-      <AboutUs />
-     <Mission />
-      <Photo/>
-      <Structure />
-      <JoinUs />
-      <Donate />
-      <Impact /> 
+      <Landing />
+      <div className="max-w-screen-xl p-10 z-10 space-y-12">
+        <AboutUs />
+        <Mission />
+        <Photo />
+        <Structure />
+        <Impact />
+        <JoinUs />
+        <Donate />
       </div>
-
-      <Footer/>
-
+      <Footer />
     </div>
   );
 }
