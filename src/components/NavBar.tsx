@@ -3,12 +3,11 @@ import { Link as RouterLink } from "react-router-dom";
 import logo from "/logo/mainlogo.png";
 
 const navItems = [
+  { name: "Home", to: "/", style: "bg-gbGreen", type: "page" }, 
+  { name: "Programas", to: "/programas", style: "bg-gbBlue", type: "page" },
   { name: "Nosotros", to: "/nosotros", style: "bg-gbRed", type: "page" }, 
-  { name: "Home", to: "", style: "bg-gbGreen", type: "scroll" }, 
-  { name: "Impacto", to: "impacto", style: "bg-gbBlue", type: "scroll" },
-  { name: "Contacto", to: "contacto", style: "bg-gbRed", type: "scroll" },
+  { name: "Contacto", to: "/contacto", style: "bg-gbYellow", type: "page" },
 ];
-
 function NavBar() {
   return (
     <nav className="p-2 fixed  w-full top-0 z-20">
@@ -18,7 +17,6 @@ function NavBar() {
             <img src={logo} alt="Home Logo" className="h-full" />
           </div>
         </RouterLink>
-
         <div className="flex space-x-2 md:space-x-4 p-3 bg-gbBlack z-0 rounded-md px-3">
           {navItems.map((item, index) => (
             <li
