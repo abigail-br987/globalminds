@@ -41,7 +41,7 @@ const JoinUs: React.FC = () => {
                 </div>
                 <p>{option.description}</p>
                 <ButtonWithArrow
-                  className="bg-gbWhite"
+                  className="bg-gbWhite bg-opacity-50"
                   onClick={() => toggleModal(option)}
                 >
                   Más información
