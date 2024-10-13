@@ -1,6 +1,7 @@
 
 import banner from "/images/banner.png";
 import { socialLinks } from "../assets/script/content";
+
 const FollowUs = () => {
 
   return (
@@ -8,7 +9,7 @@ const FollowUs = () => {
       style={{ backgroundImage: `url(${banner})` }}
       className="bg-cover bg-center flex py-12 justify-center"
     >
-      <div className="p-8 bg-gbBlack rounded-lg shadow-lg text-center max-w-lg space-y-6">
+      <div className="p-8 bg-gbBlack rounded-lg shadow-lg text-center max-w-lg space-y-4 ">
         <h2>¡Síguenos y Únete a Nuestra Comunidad!</h2>
         <div className="flex flex-col">
           {socialLinks.map((link, index) => (
@@ -19,7 +20,7 @@ const FollowUs = () => {
               rel="noopener noreferrer"
             >
               <button
-                className={`flex w-full items-center justify-center ${link.bgColor}
+                className={`flex w-full items-center justify-center bg-transparent p-1 m-0
            rounded-lg saturate-200 shadow transition-transform hover:scale-105  hover:bg-opacity-100 bg-opacity-80`}
               >
                 {link.icon}
