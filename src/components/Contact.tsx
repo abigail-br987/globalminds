@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import ButtonWithArrow from "./small_components/ButtonWithArrow";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
@@ -105,15 +106,14 @@ const Contact: React.FC = () => {
           />
         </div>
         <div className="float-right">
-          <button
-            type="submit"
-            className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
-          >
-            Send Message
-          </button>
+          <ButtonWithArrow className="bg-gbGreen ">
+          Send Message
+
+          </ButtonWithArrow>
+
         </div>
       </form>
-      {status && <p className="text-green-500">{status}</p>}
+      {status && <p className="">{status}</p>}
     </section>
   );
 };
