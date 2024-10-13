@@ -94,8 +94,6 @@ function Figures() {
         return (
           <motion.span
             key={index}
-            initial="hidden"
-            animate="visible"
             custom={index}
             className={`z-0 absolute ${className2}`}
             variants={animations.figure}
