@@ -9,6 +9,7 @@ interface Props {
   description: string;
   linkName: string;
   url: string;
+  color:string;
 }
 
 const ProgramasComponent: React.FC<Props> = ({
@@ -17,12 +18,13 @@ const ProgramasComponent: React.FC<Props> = ({
   title,
   speaker,
   date,
+  color,
   description,
   linkName,
   url,
 }) => {
   return (
-    <div className={`p-4 ${photo ? 'flex items-center' : ''} bg-gbWhite max-w-sm rounded-lg text-gbBlack items-start m-1`}>
+    <div className={`p-4 ${photo ? 'flex items-center' : ''} bg-${color} max-w-sm rounded-lg items-start my-1 mx-2 text-gbBlack`}>
       {photo && (
         <img
           src={photo}
@@ -37,9 +39,9 @@ const ProgramasComponent: React.FC<Props> = ({
         </h2>
         {speaker && <h3 className="text-lg font-semibold">{speaker}</h3>}
         <p className="mt-2">{description}</p>
-        {date && <p className="text-sm text-gray-500 mt-1">{date}</p>}
+        {date && <p className="text-sm text-gray-700 mt-1">{date}</p>}
         <a href={url} target="_blank" rel="noopener noreferrer">
-          <ButtonWithArrow className="bg-gbBlack text-gbWhite">{linkName}</ButtonWithArrow>
+          <ButtonWithArrow className="bg-gbWhite text-gbBlack">{linkName}</ButtonWithArrow>
         </a>
       </div>
     </div>
