@@ -50,20 +50,7 @@ export const socialLinks = [
   },
 ];
 
-export const aboutUsContent = [
-  {
-    title: "¿Quiénes Somos?",
-    description:
-      "Somos una organización juvenil que empodera jóvenes latinos, proporcionando acceso a recursos, conexiones y mentoría personalizada. Creemos que el éxito individual puede multiplicarse para el beneficio de la comunidad, por lo que ofrecemos asesoría gratuita para apoyar a los estudiantes a lograr sus metas educativas y profesionales en el extranjero.",
-  },
-];
-export const missionContent = [
-  {
-    title: "Nuestra Misión",
-    description:
-      "Nuestra misión es crear una plataforma donde los jóvenes puedan acceder a mentores, charlas inspiradoras y talleres prácticos, eliminando barreras económicas y culturales que limitan las oportunidades de muchos. ",
-  },
-];
+
 export const joinOptions = [
   {
     title: "Únete como Mentee",
@@ -182,6 +169,7 @@ export const structureItems = [
     figure: <Figure3 className="w-10 absolute -rotate-45 z-0 opacity-50" />,
   },
 ];
+
 export const impactData = [
   {
     value: "+23",
@@ -202,10 +190,6 @@ export const impactData = [
   {
     value: "50%",
     text: "crecimiento mensual en la participación",
-  },
-  {
-    value: "",
-    text: "algo de testimonios",
   },
 ];
 
