@@ -11,22 +11,22 @@
     @apply text-8xl font-bold font-lucidity; 
   }
   h2 {
-    @apply text-xl md:text-3xl font-semibold; 
+    @apply text-xl md:text-3xl font-semibold font-mono; 
   }
   h3 {
-    @apply text-lg font-bold tracking-wide; 
+    @apply text-lg font-bold font-mono tracking-wide; 
   }
   h4 {
-    @apply text-base font-semibold tracking-wide; 
+    @apply text-base font-semibold font-mono tracking-wide; 
   }
   button {
-    @apply px-4 py-1 my-2 bg-gbRed rounded-full; 
+    @apply px-4 py-1 my-2 font-semibold rounded-full; 
   }
   p {
     @apply leading-5
   }
   body {
-    @apply font-mono text-gbWhite
+    @apply font-rubik text-gbWhite
   }
   input, textarea {
     @apply accent-gbRed caret-gbGreen outline-gbGreen
