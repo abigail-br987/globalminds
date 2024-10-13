@@ -13,7 +13,7 @@ export default {
         gbBlue: '#2D96A2',
         gbBlack: '#2B2B2B',
         gbWhite: '#F8F8F8',
-        gbYellow: '#eab72c',
+        gbYellow: '#FBD261',
         gsLightBlue: '#ADDAE9',
         gsLightPurple: '#ADA3DA',
         gsBrightPink: '#F34F87',
