@@ -24,8 +24,8 @@ interface Star9sidesProps {
             y2="168.516"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FFD9A0" />
-            <stop offset="1" stop-color="#FFF5F1" />
+            <stop />
+            <stop offset="1" />
           </linearGradient>
         </defs>
       </svg>
