@@ -22,6 +22,7 @@ export default {
         gsYellow: '#FBD160'
       },
       fontFamily: {
+        rubik: ["Rubik"],
         mono: ['Fira Code', 'monospace'],
         lucidity: ["Lucidity"],
         gotaRegular: ["GotaRegular"],
