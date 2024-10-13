@@ -9,11 +9,7 @@ const DetailedStructure: React.FC = () => {
       {programs.map((program, index) => (
         <div
           key={index}
-          className={`bg-${globalMindsColors[index % globalMindsColors.length]} rounded-lg p-6 ${
-            ['gbYellow', 'gbGreen'].includes(globalMindsColors[index % globalMindsColors.length])
-              ? 'text-gbBlack'
-              : 'text-white'
-          }`}
+          className={`border-${globalMindsColors[index % globalMindsColors.length]} border-b-[10px] border-t-[10px] rounded-lg p-6`}
         >
           <h2>{program.title}</h2>
           <h3>{program.h2}</h3>
@@ -23,6 +19,7 @@ const DetailedStructure: React.FC = () => {
             {program.details.map((detail, detailIndex) => (
               <ProgramasComponent
                 key={detailIndex}
+                color={globalMindsColors[index % globalMindsColors.length]}
                 emoji={detail.emoji || ''}
                 title={detail.title || ''}
                 speaker={detail.speaker}
