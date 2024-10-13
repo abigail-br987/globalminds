@@ -28,6 +28,9 @@
   body {
     @apply font-mono text-gbWhite
   }
+  input, textarea {
+    @apply accent-gbRed caret-gbGreen outline-gbGreen
+  }
 }
 
 @font-face {
