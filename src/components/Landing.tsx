@@ -61,7 +61,7 @@ function Landing() {
         initial="hidden"
         animate="visible"
         variants={animations.showDelayed}
-        className="bg-gbYellow m-6 px-4 z-10 text-2xl font-bold py-2 rounded-full text-gbBlack"
+        className="bg-gbYellow m-6 px-4 font-mono z-10 text-2xl font-bold py-2 rounded-full text-gbBlack"
       >
         empoderando jóvenes latinos
       </motion.span>
