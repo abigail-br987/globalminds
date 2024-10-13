@@ -1,6 +1,51 @@
 import Figure11 from "../../svg/Figure11";
 import Figure12 from "../../svg/Figure12";
 import Figure3 from "../../svg/Figure3";
+import {
+  FaLinkedin,
+  FaInstagram,
+  FaDiscord,
+  FaWhatsapp,
+  FaEnvelope,
+} from "react-icons/fa";
+
+export const number = "+51 999 999 999"
+export const location = "Lima, Perú"
+export const email = "info@.com"
+
+export const socialLinks = [
+  {
+    href: "https://www.linkedin.com",
+    bgColor: "bg-gbBlue",
+    text: "Síguenos en LinkedIn",
+    icon: <FaLinkedin />,
+  },
+  {
+    href: "https://www.instagram.com",
+    bgColor: "bg-gsPink",
+    text: "Síguenos en Instagram",
+    icon: <FaInstagram />,
+  },
+  {
+    href: "https://discord.com",
+    bgColor: "bg-gsLightPurple",
+    text: "Únete a nuestro Discord",
+    icon: <FaDiscord />,
+  },
+  {
+    href: "https://www.whatsapp.com",
+    bgColor: "bg-gbGreen",
+    text: "Únete a nuestro grupo de WhatsApp",
+    icon: <FaWhatsapp />,
+  },
+  {
+    href: `mailto:${email}`,
+    bgColor: "bg-gbYellow",
+    text: "Escríbenos por Email",
+    icon: <FaEnvelope />,
+  },
+];
+
 export const aboutUsContent = [
   {
     title: "¿Quiénes Somos?",
@@ -148,6 +193,10 @@ export const impactData = [
   {
     value: "50%",
     text: "crecimiento mensual en la participación",
+  },
+  {
+    value: "",
+    text: "algo de testimonios",
   },
 ];
 
