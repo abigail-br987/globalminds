@@ -6,10 +6,7 @@ function Impact() {
     <div className="hyphens-auto text-gbWhite space-y-6">
       <div className="relative flex items-center justify-center w-full">
         <ColorfulTitle text="IMPACTO" />
-        <button className="absolute group right-0 bg-gbBlue text-white px-4 py-2 rounded-full hover:bg-gbDarkBlue">
-          Testimonios
-          <FaArrowRightLong className="inline-block group-hover:ml-5 transition-all" />
-        </button>
+
       </div>
       <p>
         No solo ofrecemos asesoría académica y profesional gratuita que en otros
