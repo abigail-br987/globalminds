@@ -18,7 +18,7 @@ function NavBar() {
   }, [location]);
 
   return (
-    <nav className="p-2 fixed w-full top-0 z-50">
+    <nav className="p-2 fixed w-full top-0 z-50 font-mono">
       <ul className="items-start flex justify-between">
         <RouterLink to="/">
           <div className="cursor-pointer flex space-x-3 ">
