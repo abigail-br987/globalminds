@@ -22,11 +22,11 @@ function JoinUs() {
     <div>
       <h2 className="text-center text-gbWhite">Únete</h2>
       <div className="mt-6 mb-10 space-y-4 rounded text-gbWhite hyphens-auto">
-        <div className="sm:grid max-sm:space-y-8 max-sm:block grid-cols-2 gap-10">
+        <div className="sm:grid  max-sm:space-y-8 max-sm:block grid-cols-2 gap-10">
           {joinOptions.map((option, index) => (
             <div
               key={index}
-              className={`sm:flex ${getBackgroundColor(index)} p-4 rounded-lg`}
+              className={`sm:flex  text-gbBlack ${getBackgroundColor(index)} p-4 rounded-lg`}
             >
               <div className={"flex-1"}>
                 <h3>{option.title}</h3>
