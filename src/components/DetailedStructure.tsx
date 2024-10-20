@@ -1,40 +1,86 @@
-
 import { globalMindsColors } from "@/script/content";
 import ProgramasComponent from "./Charlas";
-import { programs } from "@/script/content";
+import { client } from "@/sanity/client";
+import imageUrlBuilder from "@sanity/image-url";
+import { type SanityDocument } from "next-sanity"; 
+import Image from "next/image";
+import { Key, ReactElement, JSXElementConstructor, ReactNode, AwaitedReactNode, ReactPortal } from "react";
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
+const { projectId, dataset } = client.config();
+import ColorfulTitle from "./small_components/ColorfulTitle";
 
-const DetailedStructure: React.FC = () => {
+const urlFor = (source: SanityImageSource) =>
+  projectId && dataset
+    ? imageUrlBuilder({ projectId, dataset }).image(source)
+    : null;
+
+const POSTS_QUERY = `*[ 
+  _type == "offerings" 
+] | order(publishedAt desc)[0...12]{ 
+  _id, 
+  title, 
+  description, 
+  type, 
+  mode, 
+  sociallinks,
+  register, 
+  emoji, 
+  time,
+  image,
+}`;
+
+const options = { next: { revalidate: 30 } };
+
+export default async function DetailedStructure() {
+  const elements = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
+
+  const groupedElements = elements.reduce((acc, element) => {
+    const { type } = element;
+    if (!acc[type]) {
+      acc[type] = [];
+    }
+    acc[type].push(element);
+    return acc;
+  }, {} as Record<string, SanityDocument[]>);
+
   return (
-    <div className="container mx-auto p-4 space-y-6">
-      {programs.map((program, index) => (
-        <div
-          key={index}
-          className={`border-${globalMindsColors[index % globalMindsColors.length]} border-b-[10px] border-t-[10px] rounded-lg p-6`}
-        >
-          <h2>{program.title}</h2>
-          <h3>{program.h2}</h3>
-          <p className="mt-2">{program.description}</p>
+    <div className="container mx-auto p-4 space-y-6 text-gbBlack">
+      {Object.keys(groupedElements).map((type) => (
+        <div key={type} className="space-y-4">
 
-          <div className="flex flex-wrap mt-3">
-            {program.details.map((detail, detailIndex) => (
-              <ProgramasComponent
-                key={detailIndex}
-                color={globalMindsColors[index % globalMindsColors.length]}
-                emoji={detail.emoji || ''}
-                title={detail.title || ''}
-                speaker={detail.speaker}
-                photo={detail.photo}
-                date={detail.date}
-                description={detail.description || ''}
-                linkName={detail.linkName || 'Learn More'}
-                url={detail.url || '#'}
-              />
+          {type === "charlas" && (<> 
+            <ColorfulTitle text="CHARLAS"/></>
+          )}
+          {type === "networking" && (
+            <ColorfulTitle text="NETWORKING"/>
+          )}
+          {type === "talleres" && (
+            <ColorfulTitle text="TALLERES"/>
+          )}
+          {type === "mentores" && (
+            <ColorfulTitle text="MENTORES"/>
+          )}
+  
+          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {groupedElements[type].map((element) => (
+              <div key={element._id} className="border rounded-lg">
+                <ProgramasComponent
+                  photo={element.image ? element.image._upload.previewImage : null}
+                  emoji={element.emoji}
+                  title={element.title}
+                  date={element.time}
+                  mode={element.mode}
+                  type={element.type}
+                  sociallinks={element.sociallinks}
+                  color={element.color}
+                  description={element.description}
+                  linkName={element.linkName}
+                  url={element.url}
+                />
+              </div>
             ))}
           </div>
         </div>
       ))}
     </div>
-  );
-};
-
-export default DetailedStructure;
+  )}

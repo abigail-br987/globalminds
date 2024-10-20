@@ -36,7 +36,7 @@ const OurTeam: React.FC = () => {
               className={`group relative cursor-pointer opacity-90 transition-transform duration-300 hover:scale-105 hover:opacity-100`}
             >
               <Image
-                src={logo}
+                src={logo} fill 
                 alt={`Logo for ${member.name}`}
                 className="w-full h-fit duration-300 transition-all"
               />
@@ -59,7 +59,7 @@ const OurTeam: React.FC = () => {
               {teamMembers[selectedMember].name}
             </h2>
             <Image
-              src={logo}
+              src={logo} fill 
               alt={teamMembers[selectedMember].name}
               className="w-32 h-32 mx-auto rounded-full"
             />

@@ -22,8 +22,9 @@ function Impact() {
             </h3>
           </div>
         ))}
+        {/*
         <button className="bg-gbWhite text-gbBlack h-max self-center py-4 rounded-xl"> <p> Leer Testimonios </p><FaReadme className="text-3xl m-auto"/> </button>
-      </div>
+      */} </div>
     </div>
   );
 }

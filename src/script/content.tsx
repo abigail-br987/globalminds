@@ -310,6 +310,7 @@ export const ourTeamParagraph = [
   "Global Minds no sería posible sin el increíble equipo que lo hace funcionar día a día.",
   "Cada uno trabaja arduamente para asegurar que nuestros estudiantes tengan acceso a las mejores oportunidades",
 ];
+
 interface Program {
   title: string;
   h2: string;
@@ -324,10 +325,10 @@ interface Detail {
   emoji?: string;
   description?: string;
   photo?: string;
-  icon?: string;
   linkName?: string;
   url?: string;
 }
+
 export const programs: Program[] = [
   {
     title: "CHARLAS SEMANALES",
@@ -381,7 +382,7 @@ export const programs: Program[] = [
     details: [
       {
         title: "Juan García",
-        photo: "path/to/juan-garcia.jpg",
+        photo: "",
         linkName: "Linkedin",
         url: "https://www.linkedin.com/in/juangarcia",
         description:
@@ -389,7 +390,7 @@ export const programs: Program[] = [
       },
       {
         title: "Juan García",
-        photo: "path/to/juan-garcia.jpg",
+        photo: "",
         linkName: "Linkedin",
         url: "https://www.linkedin.com/in/juangarcia",
         description:
@@ -397,7 +398,7 @@ export const programs: Program[] = [
       },
       {
         title: "Juan García",
-        photo: "path/to/juan-garcia.jpg",
+        photo: "",
         linkName: "Linkedin",
         url: "https://www.linkedin.com/in/juangarcia",
         description:
@@ -414,21 +415,21 @@ export const programs: Program[] = [
       {
         title: "Taller de Preparación para el SAT",
         date: "28 de octubre de 2024",
-        photo: "path/to/sat-workshop.jpg",
+        photo: "",
         url: "fewfwe",
         linkName: "fewfw",
       },
       {
         title: "Taller de Preparación para el SAT",
         date: "28 de octubre de 2024",
-        photo: "path/to/sat-workshop.jpg",
+        photo: "",
         url: "fewfwe",
         linkName: "fewfw",
       },
       {
         title: "Taller de Preparación para el SAT",
         date: "28 de octubre de 2024",
-        photo: "path/to/sat-workshop.jpg",
+        photo: "",
         url: "fewfwe",
         linkName: "fewfw",
       },
@@ -436,7 +437,7 @@ export const programs: Program[] = [
     ],
   },
   {
-    title: "OPORTUNIDADES",
+    title: "NETWORKING",
     h2: "Oportunidades Actuales",
     description:
       "Fomentamos una comunidad donde nuestros miembros pueden hacer networking y conectarse con jóvenes, mentores y profesionales de todo el mundo, creando oportunidades de colaboración y proyectos conjuntos.",

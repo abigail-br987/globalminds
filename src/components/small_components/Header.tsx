@@ -1,17 +1,19 @@
 interface HeaderProps {
-    image: string;
+    image?: string;
     children?: React.ReactNode;
 }
 const Header: React.FC<HeaderProps> = ({ image, children }) => {
     return (
+      <div className="relative w-full h-64 flex justify-center items-center">
       <div
-        className="w-full h-64 bg-cover bg-center flex justify-center items-center"
-        style={{ backgroundImage: `url(${image})` }}
-      >
-        <h1 style={{ textShadow: "3px 3px 2px rgba(2, 2, 2, 2)" }}>
-        {children}
-        </h1>
-      </div>
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${image})`}}
+      />
+      <h1 className="relative z-10 text-white">
+          {children}
+      </h1>
+  </div>
+
     );
 };
   

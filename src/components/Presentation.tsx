@@ -11,14 +11,16 @@ interface ContentItem {
 export const aboutUsContent: ContentItem[] = [
   {
       title: "¿Quiénes Somos?",
-      description: "Somos una organización juvenil que empodera jóvenes latinos..."
+      description:
+      "Somos una organización juvenil que empodera jóvenes latinos, proporcionando acceso a recursos, conexiones y mentoría personalizada. Creemos que el éxito individual puede multiplicarse para el beneficio de la comunidad, por lo que ofrecemos asesoría gratuita para apoyar a los estudiantes a lograr sus metas educativas y profesionales en el extranjero.",
   },
 ];
 
 export const missionContent: ContentItem[] = [
   {
       title: "Nuestra Misión",
-      description: "Nuestra misión es crear una plataforma donde los jóvenes puedan acceder..."
+      description:
+      "Nuestra misión es crear una plataforma donde los jóvenes puedan acceder a mentores, charlas inspiradoras y talleres prácticos, eliminando barreras económicas y culturales que limitan las oportunidades de muchos.",
   },
 ];
 
@@ -41,8 +43,8 @@ function Presentation() {
             </div>
           ))}
           <div>
-            <Image
-              className="h-auto  max-w-full object-cover rounded-lg  rotate-1 border-gbYellow border-[10px]"
+            <img
+              className="h-auto  max-w-full object-cover rounded-lg rotate-1 border-gbYellow border-[10px]"
               src="https://placehold.co/600x400"
               alt="Description"
             />
@@ -50,10 +52,10 @@ function Presentation() {
         </div>
         <div className="flex-1 space-y-6 flex flex-col items-center justify-center">
           <div className="max-md:hidden">
-            <Image
+            <img
               className="h-auto max-w-full object-cover rounded-lg -rotate-1 border-gbGreen border-[10px]"
               src="https://placehold.co/600x400"
-              alt="..."
+              alt="..." 
             />
           </div>
 

@@ -31,10 +31,10 @@ const Photos: React.FC<PhotosProps> = ({ images }) => {
             ];
           console.log(randomColor);
           return (
-            <Image
+            <img
               key={idx}
               className={`w-full max-h-96 h-auto object-cover rounded-lg shadow-lg border-[10px] ${rotationClass} border-${randomColor}`}
-              src={src}
+              src={src} 
               alt={`Image ${idx + 1}`}
             />
           );

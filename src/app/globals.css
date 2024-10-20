@@ -47,3 +47,15 @@
   src: url('/fonts/gotalight.ttf') format('truetype');
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/Rubik-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik-medium';
+  src: url('/fonts/Rubik-Medium.ttf') format('truetype');
+  font-style: normal;
+}
