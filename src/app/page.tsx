@@ -15,7 +15,7 @@ export default async function IndexPage() {
 
   return (
     <div className="container mx-auto min-h-screen max-w-3xl p-8 text-black">
-      <h1 className="text-4xl font-bold mb-8">Posts</h1>
+      <h1 className="text-4xl font-bold mb-8">Posts!</h1>
       <ul className="flex flex-col gap-y-4">
         {posts.map((post) => (
           <li className="hover:underline" key={post._id}>
