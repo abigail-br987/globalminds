@@ -8,7 +8,7 @@ const banner = "/images/banner.png";
 function Programas() {
   return (
     <div className="flex flex-col justify-center items-center m-auto bg-gbBlack">
-      <Header image={banner}>OPORTUNIDADES</Header>
+      <Header image={banner}>OPORTUNIDADES!</Header>
       <NavBar />
       <DetailedStructure />
       <Footer />
