@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-
+import Image from "next/image";
 const navItems = [
   { name: "Home", to: "/", style: "bg-gbGreen" },
   { name: "Programas", to: "/programas", style: "bg-gbBlue" },
@@ -14,11 +14,11 @@ function NavBar() {
     <nav className="p-2 fixed w-full top-0 z-50 font-mono">
       <ul className="items-start flex justify-between">
         <Link href={"/home"} className="cursor-pointer flex space-x-3">
-            <img
+            <Image
               src={"/logo/mainlogo.png"}
               alt="Home Logo"
               className="max-w-12 max-h-12 rounded-full"
-            ></img>
+            ></Image>
             <span className="py-1 px-3 bg-gbBlack h-max rounded-md font-mono font-bold">
               GLOBAL MINDS
             </span>

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { teamMembers } from "@/script/content";
 import Modal from "./Modal";
+import Image from "next/image";
 const logo = "/logo/mainlogo.png";
 
 const OurTeam: React.FC = () => {
@@ -34,7 +35,7 @@ const OurTeam: React.FC = () => {
               onClick={() => handleMemberClick(index)}
               className={`group relative cursor-pointer opacity-90 transition-transform duration-300 hover:scale-105 hover:opacity-100`}
             >
-              <img
+              <Image
                 src={logo}
                 alt={`Logo for ${member.name}`}
                 className="w-full h-fit duration-300 transition-all"
@@ -57,7 +58,7 @@ const OurTeam: React.FC = () => {
             <h2 className="text-lg font-bold">
               {teamMembers[selectedMember].name}
             </h2>
-            <img
+            <Image
               src={logo}
               alt={teamMembers[selectedMember].name}
               className="w-32 h-32 mx-auto rounded-full"

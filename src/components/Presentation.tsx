@@ -2,23 +2,27 @@
 import { motion } from "framer-motion";
 import { animations } from "./animations/animations";
 import Star9sides from "@/svg/Star9sides";
-
-interface AboutUsContent {
+import Image from "next/image";
+interface ContentItem {
   title: string;
   description: string;
 }
 
-interface MissionContent {
-  title: string;
-  description: string;
-}
+export const aboutUsContent: ContentItem[] = [
+  {
+      title: "¿Quiénes Somos?",
+      description: "Somos una organización juvenil que empodera jóvenes latinos..."
+  },
+];
 
-interface PresentationProps {
-  aboutUsContent: AboutUsContent[];
-  missionContent: MissionContent[];
-}
+export const missionContent: ContentItem[] = [
+  {
+      title: "Nuestra Misión",
+      description: "Nuestra misión es crear una plataforma donde los jóvenes puedan acceder..."
+  },
+];
 
-function Presentation({ aboutUsContent, missionContent }: PresentationProps) {
+function Presentation() {
   return (
     <>
       <motion.div
@@ -37,7 +41,7 @@ function Presentation({ aboutUsContent, missionContent }: PresentationProps) {
             </div>
           ))}
           <div>
-            <img
+            <Image
               className="h-auto  max-w-full object-cover rounded-lg  rotate-1 border-gbYellow border-[10px]"
               src="https://placehold.co/600x400"
               alt="Description"
@@ -46,7 +50,7 @@ function Presentation({ aboutUsContent, missionContent }: PresentationProps) {
         </div>
         <div className="flex-1 space-y-6 flex flex-col items-center justify-center">
           <div className="max-md:hidden">
-            <img
+            <Image
               className="h-auto max-w-full object-cover rounded-lg -rotate-1 border-gbGreen border-[10px]"
               src="https://placehold.co/600x400"
               alt="..."

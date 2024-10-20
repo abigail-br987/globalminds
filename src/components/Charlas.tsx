@@ -1,5 +1,5 @@
 import ButtonWithArrow from "./small_components/ButtonWithArrow";
-
+import Image from "next/image";
 interface Props {
   emoji: string;
   title: string;
@@ -26,7 +26,7 @@ const ProgramasComponent: React.FC<Props> = ({
   return (
     <div className={`p-4 ${photo ? 'flex items-center' : ''} bg-${color} max-w-sm rounded-lg items-start my-1 mx-2 text-gbBlack`}>
       {photo && (
-        <img
+        <Image
           src={photo}
           alt={`${title} image`}
           className="max-w-sm rounded-full object-cover"
