@@ -1,6 +1,5 @@
 import { donateMessage } from "@/script/content";
 import ButtonWithArrow from "./small_components/ButtonWithArrow";
-import Image from "next/image";
 function Donate() {
   return (
     <div className="flex text-gbWhite items-center">
