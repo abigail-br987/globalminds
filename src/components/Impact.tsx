@@ -1,6 +1,5 @@
 import ColorfulTitle from "./small_components/ColorfulTitle";
 import { impactData } from "@/script/content";
-import { FaReadme } from "react-icons/fa";
 
 function Impact() {
   return (

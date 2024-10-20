@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 const navItems = [
   { name: "Home", to: "/", style: "bg-gbGreen" },
   { name: "Programas", to: "/programas", style: "bg-gbBlue" },

@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import { animations } from "./animations/animations";
 import Star9sides from "@/svg/Star9sides";
-import Image from "next/image";
 interface ContentItem {
   title: string;
   description: string;

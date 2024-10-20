@@ -1,5 +1,4 @@
 import { globalMindsColors } from "@/script/content";
-import Image from "next/image";
 interface PhotosProps {
   images: string[];
 }
