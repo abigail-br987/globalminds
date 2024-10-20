@@ -1,4 +1,3 @@
-import { link } from "fs";
 import ButtonWithArrow from "./small_components/ButtonWithArrow";
 import { FaLinkedin, FaInstagram, FaFacebook, FaGlobe } from "react-icons/fa";
 
@@ -18,7 +17,7 @@ interface Props {
 const formatDate = (isoDate: string) => {
   const dateObject = new Date(isoDate);
 
-  // Format the date and time separately
+
   const formattedDate = dateObject.toLocaleDateString(undefined, {
     year: "numeric",
     month: "short",
@@ -30,7 +29,6 @@ const formatDate = (isoDate: string) => {
     minute: "2-digit",
   });
 
-  // Get the timezone name
   const timeZone = dateObject
     .toLocaleTimeString(undefined, { timeZoneName: "short" })
     .split(" ")

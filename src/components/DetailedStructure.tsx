@@ -1,18 +1,10 @@
-import { globalMindsColors } from "@/script/content";
 import ProgramasComponent from "./Charlas";
 import { client } from "@/sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 import { type SanityDocument } from "next-sanity"; 
-import Image from "next/image";
-import { Key, ReactElement, JSXElementConstructor, ReactNode, AwaitedReactNode, ReactPortal } from "react";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 const { projectId, dataset } = client.config();
 import ColorfulTitle from "./small_components/ColorfulTitle";
-
-const urlFor = (source: SanityImageSource) =>
-  projectId && dataset
-    ? imageUrlBuilder({ projectId, dataset }).image(source)
-    : null;
 
 const POSTS_QUERY = `*[ 
   _type == "offerings" 
