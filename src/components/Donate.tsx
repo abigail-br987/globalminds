@@ -7,7 +7,7 @@ function Donate() {
         <Image src={"/logo/mainlogo.png"} alt="image" className="w-full h-full object-cover" />
       </div>
       <div className="lg:pl-6 flex-shrink">
-        <h2>Donar</h2>
+        <h2>Donar!</h2>
         <ul>
           {donateMessage.map((message, index) => (
             <li key={index}>{message}</li>

@@ -1,5 +1,5 @@
 interface ColorfulTextProps extends React.HTMLAttributes<HTMLDivElement> {
-  text: string;
+  text: string ;
   className?: string; 
   onClick?: () => void;
 }
@@ -7,7 +7,7 @@ interface ColorfulTextProps extends React.HTMLAttributes<HTMLDivElement> {
 const colorClasses = [
   "text-gbBlue",
   "text-gbRed",
-  "text-yellow-500",
+  "text-yellow-500", 
   "text-gbGreen" ,
 ];
 
