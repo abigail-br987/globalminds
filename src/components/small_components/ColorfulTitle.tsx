@@ -8,7 +8,7 @@ const colorClasses = [
   "text-gbBlue",
   "text-gbRed",
   "text-yellow-500",
-  "text-gbGreen",
+  "text-gbGreen" ,
 ];
 
 const ColorfulTitle: React.FC<ColorfulTextProps> = ({ text, className = "", onClick, ...props }) => {
