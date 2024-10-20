@@ -1,9 +1,6 @@
 import ProgramasComponent from "./Charlas";
 import { client } from "@/sanity/client";
-import imageUrlBuilder from "@sanity/image-url";
 import { type SanityDocument } from "next-sanity"; 
-import { SanityImageSource } from "@sanity/image-url/lib/types/types";
-const { projectId, dataset } = client.config();
 import ColorfulTitle from "./small_components/ColorfulTitle";
 
 const POSTS_QUERY = `*[ 
