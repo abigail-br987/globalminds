@@ -84,14 +84,17 @@ const figures = [
 function Figures() {
   const { scrollY } = useScroll();
 
-  return (
+  const transforms = figures.map((_, index) => ({
+    rotate: useTransform(scrollY, [0, 1000], [0, -20]),
+    scale: useTransform(scrollY, [0, 1000], [1, 1.2]),
+    opacity: useTransform(scrollY, [0, 1000], [1, 0.01]),
+  }));
 
-    <div className=" fixed flex justify-center 
-     items-center h-screen w-full -top-10 z-0">
+  return (
+    <div className="fixed flex justify-center items-center h-screen w-full -top-10 z-0">
       {figures.map(({ Component, className, className2, color }, index) => {
-        const rotate = useTransform(scrollY, [0, 1000], [0, -20]);
-        const scale = useTransform(scrollY, [0, 1000], [1, 1.2]);
-        const opacity = useTransform(scrollY, [0, 1000], [1, 0.01]);
+        const { rotate, scale, opacity } = transforms[index];
+
         return (
           <motion.span
             key={index}
@@ -108,4 +111,5 @@ function Figures() {
     </div>
   );
 }
+
 export default Figures;

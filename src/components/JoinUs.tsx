@@ -1,5 +1,4 @@
 "use client"
-import Dropdown from "./small_components/Dropdown";
 import { joinOptions } from "@/script/content";
 import { useState } from "react";
 import ButtonWithArrow from "./small_components/ButtonWithArrow";

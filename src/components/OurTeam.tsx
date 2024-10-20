@@ -1,7 +1,6 @@
 "use client"
 import { useState } from "react";
 import { teamMembers } from "@/script/content";
-import { globalMindsColors } from "@/script/content";
 import Modal from "./Modal";
 const logo = "/logo/mainlogo.png";
 

@@ -73,7 +73,7 @@ function Landing() {
           {[
             "G",
             "l",
-            <LogoBrain className="inline-block h-64 mb-7" />,
+            <LogoBrain className="inline-block h-64 mb-7" key="brain-logo" />
             "b",
             "a",
             "l",
