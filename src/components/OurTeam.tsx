@@ -6,7 +6,6 @@ import { SanityDocument } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import { client } from "@/sanity/client";
-import OurTeamServer from "./OurTeamServer";
 const builder = imageUrlBuilder(client);
 
 function urlFor(source: SanityImageSource) {
@@ -14,12 +13,12 @@ function urlFor(source: SanityImageSource) {
 }
 
 interface OurTeamProps {
-  members: SanityDocument[]; 
+  members: SanityDocument[];
 }
 
 export default function OurTeam({ members }: OurTeamProps) {
   const [selectedMember, setSelectedMember] = useState<number | null>(null);
-  
+
   const handleMemberClick = (index: number) => {
     setSelectedMember(index);
   };
@@ -33,7 +32,7 @@ export default function OurTeam({ members }: OurTeamProps) {
   }
 
   return (
-    <div className="bg-gbBlack max-w-screen-xl my-10 m-auto">
+    <div className="max-w-screen-xl my-10 m-auto">
       <div className="max-w-lg mb-6">
         <p>Conoce al Equipo detrás de </p>
         <h2>GlobalMinds</h2>
@@ -47,19 +46,21 @@ export default function OurTeam({ members }: OurTeamProps) {
         {members.map((member, index) => {
           const postImageUrl = member.photo
             ? urlFor(member.photo).width(550).height(310).url()
-            : "/default-image.png";
-
+            : "/image/banner.png";
           return (
             <div
               key={index}
               onClick={() => handleMemberClick(index)}
-              className="group relative cursor-pointer opacity-90 transition-transform duration-300 hover:scale-105 hover:opacity-100"
+              className="group relative transition-transform cursor-pointer hover:scale-105 "
             >
-              <img
-                src={postImageUrl}
-                alt={`Photo of ${member.name}`}
-                className="w-full h-fit duration-300 transition-all"
-              />
+              <div className="relative w-full aspect-square">
+                <Image
+                  src={postImageUrl}
+                  layout="fill"
+                  alt={`Photo of ${member.name}`}
+                  className="object-cover duration-300 transition-all rounded"
+                />
+              </div>
               <div className="absolute text-sm bottom-0 m-2 border-gbBlack border px-1 bg-gbBlack text-gbWhite transition-all">
                 <h3>{member.name}</h3>
                 <p>{member.role}</p>
