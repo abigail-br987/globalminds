@@ -1,5 +1,7 @@
 import ButtonWithArrow from "./small_components/ButtonWithArrow";
 import { FaLinkedin, FaInstagram, FaFacebook, FaGlobe } from "react-icons/fa";
+import { MdDateRange } from "react-icons/md";
+import { TbClockHour4 } from "react-icons/tb";
 
 interface Props {
   emoji: string;
@@ -14,27 +16,23 @@ interface Props {
   sociallinks?: { platform: string; url: string }[];
   mode?: string;
 }
+
+const truncateText = (text: string, maxLength: number) => {
+  if (text.length > maxLength) {
+    return text.substring(0, maxLength) + "...";
+  }
+  return text;
+};
+
 const formatDate = (isoDate: string) => {
   const dateObject = new Date(isoDate);
+  const day = dateObject.getDate();
+  const fullMonth = dateObject.toLocaleString("default", { month: "long" });
+  const month = fullMonth.slice(0, 3);
+  const hour = dateObject.getHours();
+  const minutes = dateObject.getMinutes().toString().padStart(2, "0");
 
-
-  const formattedDate = dateObject.toLocaleDateString(undefined, {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
-
-  const formattedTime = dateObject.toLocaleTimeString(undefined, {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
-
-  const timeZone = dateObject
-    .toLocaleTimeString(undefined, { timeZoneName: "short" })
-    .split(" ")
-    .pop();
-
-  return `${formattedDate}, ${formattedTime} ${timeZone}`;
+  return { day, month, hour, minutes };
 };
 
 const ProgramasComponent: React.FC<Props> = ({
@@ -64,51 +62,90 @@ const ProgramasComponent: React.FC<Props> = ({
     }
   };
 
+  const formattedDate = date ? formatDate(date) : null;
+
   return (
-    <div
-      className={`p-6 bg-${color} space-y-2 bg-gbWhite rounded-lg`}
-    >
-      {photo && (
-        <img
-          src={photo}
-          alt={`${title} image`}
-          className="w-full h-48 object-cover rounded-lg"
-        />
-      )}
-      <div className="flex justify-between items-center">
-        <h3>{title}</h3>
-        {type === "mentores" && sociallinks ? (
-          <div className="flex space-x-4">
-            {sociallinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-2xl hover:opacity-75 transition-opacity"
-              >
-                {renderSocialIcon(link.platform)}
-              </a>
-            ))}
+    <div className={`space-y-2 bg-gbRed rounded-lg`}>
+      <div className="relative rounded-lg bg-gbRed  p-3">
+          <img
+            src={photo}
+            alt={`${title} image`}
+            className="w-full h-48 object-cover rounded-lg"
+          />
+        {formattedDate && (
+          <div className="flex items-center space-x-2 absolute top-0 bg-gbRed pr-3 pb-3 pt-3 rounded-br-lg">
+            <div className="flex flex-col items-center font-gotaRegular leading-4">
+              <span className="text-sm uppercase leading-4">
+                {formattedDate.month}
+              </span>
+              <span className="text-xl tracking-wider flex items-center justify-center leading-4">
+                {formattedDate.day}
+              </span>
+            </div>
           </div>
-        ) : (
-          <span className="text-lg">{emoji}</span>
         )}
       </div>
-      <p className="">{description}</p>
-      <div> 
-      {mode && (
-        <p className="text-sm font-medium text-gray-600">Modalidad: {mode}</p>
-      )}
-      {date && <p className="text-sm text-gray-500">{formatDate(date)}</p>}
+
+      <div className="p-3 bg-gbWhite rounded-lg">
+
+        {formattedDate && (
+          <div className="flex space-x-2 relative">
+            <div className="flex items-center justify-center space-x-1">
+              <MdDateRange />
+              <p>
+                {formattedDate.day} {formattedDate.month}
+              </p>
+            </div>
+            <div>.
+            </div>
+            <div className="flex items-center justify-center space-x-1">
+              <TbClockHour4 />
+              <p>
+                {formattedDate.hour}:{formattedDate.minutes}h
+              </p>
+            </div>
+
+            <div className="text-lg float-right">{emoji}</div>
+
+          </div>
+        )}
+
+        <div className="flex justify-between items-center mt-1">
+          <h3 className="font-rubik">{title}</h3>
+          {type === "mentores" && sociallinks ? (
+            <div className="flex space-x-4">
+              {sociallinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-2xl hover:opacity-75 transition-opacity"
+                >
+                  {renderSocialIcon(link.platform)}
+                </a>
+              ))}
+            </div>
+          ) : ( null
+          )}
+        </div>
+
+        <p>{truncateText(description, 100)}</p>
+
+        {mode && (
+          <p className="text-sm font-medium text-gray-600">Modalidad: {mode}</p>
+        )}
+
+        {(type === "talleres" ||
+          type === "networking" ||
+          type === "charlas") && (
+          <ButtonWithArrow className="border-gbBlack border rounded-lg">
+            <a href={url} target="_blank" rel="noopener noreferrer">
+              {type === "networking" ? "Únete" : "Inscríbete!"}
+            </a>
+          </ButtonWithArrow>
+        )}
       </div>
-      {type === "talleres" || type === "networking" || type === "charlas" ? (
-        <ButtonWithArrow className="border-gbBlack  border">
-          <a href={url} target="_blank" rel="noopener noreferrer">
-            {type === "networking" ? "Únete" : "Inscríbete!"}
-          </a>
-        </ButtonWithArrow>
-      ) : null}
     </div>
   );
 };
