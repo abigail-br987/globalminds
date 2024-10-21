@@ -1,12 +1,32 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { teamMembers } from "@/script/content";
 import Modal from "./Modal";
 import Image from "next/image";
-const logo = "/logo/mainlogo.png";
+import { SanityDocument } from "next-sanity";
+import { client } from "@/sanity/client";
+import imageUrlBuilder from "@sanity/image-url";
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
-const OurTeam: React.FC = () => {
+const builder = imageUrlBuilder(client);
+
+const POSTS_QUERY = `*[ 
+  _type == "member" 
+]`;
+
+const options = { next: { revalidate: 30 } };
+
+function urlFor(source: SanityImageSource) {
+  return builder.image(source);
+}
+
+export default async function OurTeam() {
   const [selectedMember, setSelectedMember] = useState<number | null>(null);
+  const members = await client.fetch<SanityDocument[]>(
+    POSTS_QUERY,
+    {},
+    options
+  );
 
   const handleMemberClick = (index: number) => {
     setSelectedMember(index);
@@ -28,24 +48,25 @@ const OurTeam: React.FC = () => {
         </p>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 h-min gap-6">
-        {teamMembers.map((member, index) => {
+        {members.map((member, index) => {
+          const postImageUrl = member.photo
+            ? urlFor(member.photo).width(550).height(310).url()
+            : "/default-image.png";
+
           return (
             <div
               key={index}
               onClick={() => handleMemberClick(index)}
-              className={`group relative cursor-pointer opacity-90 transition-transform duration-300 hover:scale-105 hover:opacity-100`}
+              className="group relative cursor-pointer opacity-90 transition-transform duration-300 hover:scale-105 hover:opacity-100"
             >
               <Image
-                src={logo} fill 
-                alt={`Logo for ${member.name}`}
+                src={postImageUrl}
+                alt={`Photo of ${member.name}`}
                 className="w-full h-fit duration-300 transition-all"
               />
-              <div
-                className={`absolute text-sm bottom-0 m-2 border-gbBlack border px-1 bg-gbBlack text-gbWhite transition-all 
-                }`}
-              >
+              <div className="absolute text-sm bottom-0 m-2 border-gbBlack border px-1 bg-gbBlack text-gbWhite transition-all">
                 <h3>{member.name}</h3>
-                <p>{member.position}</p>
+                <p>{member.role}</p>
               </div>
             </div>
           );
@@ -56,19 +77,24 @@ const OurTeam: React.FC = () => {
         {selectedMember !== null && (
           <div className="text-center">
             <h2 className="text-lg font-bold">
-              {teamMembers[selectedMember].name}
+              {members[selectedMember].name}
             </h2>
             <Image
-              src={logo} fill 
-              alt={teamMembers[selectedMember].name}
+              src={
+                urlFor(members[selectedMember].photo)
+                  .width(150)
+                  .height(150)
+                  .url() || "/default-image.png"
+              }
+              width={150}
+              height={150}
+              alt={members[selectedMember].name}
               className="w-32 h-32 mx-auto rounded-full"
             />
-            <p className="mt-2">{teamMembers[selectedMember].description}</p>
+            <p className="mt-2">{members[selectedMember].description}</p>
           </div>
         )}
       </Modal>
     </div>
   );
-};
-
-export default OurTeam;
+}
