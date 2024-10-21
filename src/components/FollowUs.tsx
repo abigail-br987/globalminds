@@ -1,33 +1,22 @@
-
 import { socialLinks } from "@/script/content";
-const banner = "/images/banner.png";
+import SocialIcons from "./SocialIcons";
+const banner = "/images/banner3.png";
 
 const FollowUs = () => {
-
   return (
     <div
-      style={{ backgroundImage: `url(${banner})` }}
-      className="bg-cover bg-center flex py-12 justify-center"
+      style={{
+        backgroundImage: `url(${banner})`,
+        backgroundSize: "cover",
+        backgroundPosition: "top",
+        backgroundRepeat: "no-repeat",
+      }}
+      className="flex py-12 justify-center"
     >
-      <div className="p-8 bg-gbBlack rounded-lg shadow-lg text-center max-w-lg space-y-4 ">
-        <h2>¡Síguenos y Únete a Nuestra Comunidad!</h2>
-        <div className="flex flex-col">
-          {socialLinks.map((link, index) => (
-            <a
-              key={index}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button
-                className={`flex w-full items-center justify-center bg-transparent p-1 m-0
-           rounded-lg saturate-200 shadow transition-transform hover:scale-105  hover:bg-opacity-100 bg-opacity-80`}
-              >
-                {link.icon}
-                {" . "} {link.text}
-              </button>
-            </a>
-          ))}
+      <div className="p-3 rounded-lg scale-150 mt-32 mb-10 bg-gbBlack m-auto text-center">
+        <h2 className="text-lg">¡Síguenos y Únete!</h2>
+        <div className="">
+          <SocialIcons/>
         </div>
       </div>
     </div>
