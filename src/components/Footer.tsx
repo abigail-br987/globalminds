@@ -2,7 +2,7 @@
 import SocialIcons from "./SocialIcons";
 function Footer() {
   return (
-    <div className="text-gbWhite w-full grid grid-cols-3 gap-3 bg-gbWhite bg-opacity-10 p-6">
+    <div className="text-gbWhite rounded-lg w-full grid grid-cols-3 gap-3 bg-gbBlack p-6">
       <div className="space-y-5">
         <h3>Contáctanos</h3>
         <p>Num +5199999999</p>
