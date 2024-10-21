@@ -4,7 +4,7 @@ import ColorfulTitle from "./small_components/ColorfulTitle";
 import imageUrlBuilder from "@sanity/image-url";
 import { client } from "@/sanity/client";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
-
+import { globalMindsColors } from "@/script/content";
 const builder = imageUrlBuilder(client);
 
 function urlFor(source: SanityImageSource | null): string | undefined {
@@ -43,37 +43,41 @@ export default async function DetailedStructure() {
     {} as Record<string, SanityDocument[]>
   );
 
+  const uniqueTypes = Object.keys(groupedElements);
+
+
   return (
     <div className="container mx-auto p-4 space-y-6 text-gbBlack ">
-      {Object.keys(groupedElements).map((type) => (
-        <div key={type} className="space-y-4">
-          <ColorfulTitle text={type.toUpperCase()} />
-
-          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 ">
-            {groupedElements[type].map((element) => {
-              const componentProps = {
-                photo: element.image && element.image.asset ? urlFor(element.image.asset) : undefined,
-                emoji: element.emoji,
-                title: element.title,
-                date: element.time,
-                mode: element.mode,
-                type: element.type,
-                sociallinks: element.sociallinks,
-                color: element.color,
-                description: element.description,
-                linkName: element.linkName,
-                url: element.url,
-              };
-
-              return (
-                <div key={element._id} className="">
-                  <ProgramasComponent {...componentProps} />
-                </div>
-              );
-            })}
+      {uniqueTypes.map((type, index) => {
+        const color = globalMindsColors[index % globalMindsColors.length];
+        return (
+          <div key={type} className="space-y-4">
+            <h2 className="text-gbWhite">{type.toUpperCase()}</h2>
+            <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 ">
+              {groupedElements[type].map((element) => {
+                const componentProps = {
+                  photo: element.image && element.image.asset ? urlFor(element.image.asset) : undefined,
+                  emoji: element.emoji,
+                  title: element.title,
+                  date: element.time,
+                  mode: element.mode,
+                  type: element.type,
+                  sociallinks: element.sociallinks,
+                  color: color,
+                  description: element.description,
+                  linkName: element.linkName,
+                  url: element.url,
+                };
+                return (
+                  <div key={element._id} className="">
+                    <ProgramasComponent {...componentProps} />
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
