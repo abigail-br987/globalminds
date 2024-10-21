@@ -65,48 +65,37 @@ const ProgramasComponent: React.FC<Props> = ({
   const formattedDate = date ? formatDate(date) : null;
 
   return (
-    <div className={`space-y-2 bg-gbRed rounded-lg`}>
-      <div className="relative rounded-lg bg-gbRed  p-3">
-          <img
-            src={photo}
-            alt={`${title} image`}
-            className="w-full h-48 object-cover rounded-lg"
-          />
+    <div className={`space-y-2 bg-${color} rounded-lg`}>
+      <div className={`relative rounded-lg bg-${color} p-3`}>
+        <img
+          src={photo}
+          alt={`${title} image`}
+          className="w-full h-48 object-cover rounded-lg"
+        />
         {formattedDate && (
-          <div className="flex items-center space-x-2 absolute top-0 bg-gbRed pr-3 pb-3 pt-3 rounded-br-lg">
+          <div className={`flex items-center space-x-2 absolute top-0 bg-${color} pr-3 pb-3 pt-3 rounded-br-lg`}>
             <div className="flex flex-col items-center font-gotaRegular leading-4">
-              <span className="text-sm uppercase leading-4">
-                {formattedDate.month}
-              </span>
-              <span className="text-xl tracking-wider flex items-center justify-center leading-4">
-                {formattedDate.day}
-              </span>
+              <span className="text-sm uppercase leading-4">{formattedDate.month}</span>
+              <span className="text-xl tracking-wider flex items-center justify-center leading-4">{formattedDate.day}</span>
             </div>
           </div>
         )}
       </div>
 
       <div className="p-3 bg-gbWhite rounded-lg">
-
         {formattedDate && (
           <div className="flex space-x-2 relative">
             <div className="flex items-center justify-center space-x-1">
               <MdDateRange />
-              <p>
-                {formattedDate.day} {formattedDate.month}
-              </p>
+              <p>{formattedDate.day} {formattedDate.month}</p>
             </div>
-            <div>.
-            </div>
+            <div>.</div>
             <div className="flex items-center justify-center space-x-1">
               <TbClockHour4 />
-              <p>
-                {formattedDate.hour}:{formattedDate.minutes}h
-              </p>
+              <p>{formattedDate.hour}:{formattedDate.minutes}h</p>
             </div>
 
             <div className="text-lg float-right">{emoji}</div>
-
           </div>
         )}
 
@@ -126,8 +115,7 @@ const ProgramasComponent: React.FC<Props> = ({
                 </a>
               ))}
             </div>
-          ) : ( null
-          )}
+          ) : null}
         </div>
 
         <p>{truncateText(description, 100)}</p>
@@ -136,9 +124,7 @@ const ProgramasComponent: React.FC<Props> = ({
           <p className="text-sm font-medium text-gray-600">Modalidad: {mode}</p>
         )}
 
-        {(type === "talleres" ||
-          type === "networking" ||
-          type === "charlas") && (
+        {(type === "talleres" || type === "networking" || type === "charlas") && (
           <ButtonWithArrow className="border-gbBlack border rounded-lg">
             <a href={url} target="_blank" rel="noopener noreferrer">
               {type === "networking" ? "Únete" : "Inscríbete!"}
