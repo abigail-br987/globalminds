@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { teamMembers } from "@/script/content";
 import Modal from "./Modal";
 import Image from "next/image";
 import { SanityDocument } from "next-sanity";
