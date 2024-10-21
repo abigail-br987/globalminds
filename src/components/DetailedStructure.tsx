@@ -7,9 +7,8 @@ import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 const builder = imageUrlBuilder(client);
 
-// Ensure urlFor returns a string or undefined
 function urlFor(source: SanityImageSource | null): string | undefined {
-  return source ? builder.image(source).url() : undefined; // Use .url() to get a string URL
+  return source ? builder.image(source).url() : undefined; 
 }
 
 const POSTS_QUERY = `*[ 
@@ -32,7 +31,6 @@ const options = { next: { revalidate: 30 } };
 export default async function DetailedStructure() {
   const elements = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
 
-  // Group elements by type
   const groupedElements = elements.reduce(
     (acc, element) => {
       const { type } = element;
