@@ -3,30 +3,23 @@ import { useState } from "react";
 import Modal from "./Modal";
 import Image from "next/image";
 import { SanityDocument } from "next-sanity";
-import { client } from "@/sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
-
+import { client } from "@/sanity/client";
+import OurTeamServer from "./OurTeamServer";
 const builder = imageUrlBuilder(client);
-
-const POSTS_QUERY = `*[ 
-  _type == "member" 
-]`;
-
-const options = { next: { revalidate: 30 } };
 
 function urlFor(source: SanityImageSource) {
   return builder.image(source);
 }
 
-export default async function OurTeam() {
-  const [selectedMember, setSelectedMember] = useState<number | null>(null);
-  const members = await client.fetch<SanityDocument[]>(
-    POSTS_QUERY,
-    {},
-    options
-  );
+interface OurTeamProps {
+  members: SanityDocument[]; 
+}
 
+export default function OurTeam({ members }: OurTeamProps) {
+  const [selectedMember, setSelectedMember] = useState<number | null>(null);
+  
   const handleMemberClick = (index: number) => {
     setSelectedMember(index);
   };
@@ -34,6 +27,10 @@ export default async function OurTeam() {
   const handleCloseModal = () => {
     setSelectedMember(null);
   };
+
+  if (!members || members.length === 0) {
+    return <p>No team members available.</p>;
+  }
 
   return (
     <div className="bg-gbBlack max-w-screen-xl my-10 m-auto">
@@ -58,7 +55,7 @@ export default async function OurTeam() {
               onClick={() => handleMemberClick(index)}
               className="group relative cursor-pointer opacity-90 transition-transform duration-300 hover:scale-105 hover:opacity-100"
             >
-              <Image
+              <img
                 src={postImageUrl}
                 alt={`Photo of ${member.name}`}
                 className="w-full h-fit duration-300 transition-all"
