@@ -37,7 +37,7 @@ export default async function PostPage({
         <Image
           src={postImageUrl}
           alt={post.title}
-          className="aspect-video rounded-lg"
+          className="rounded-lg w-full"
           width={550}
           height={310}
           priority
@@ -45,10 +45,12 @@ export default async function PostPage({
       )}
       <h2 className="break-all">{post.title}</h2>
       <div className="max-w-full break-all">
-        <p className="break-all">
+        <h5>
           Publicado: {new Date(post.publishedAt).toLocaleDateString()}
-        </p>
+        </h5>
+
         {Array.isArray(post.body) && <PortableText value={post.body} />}
+
       </div>
     </main>
   );
