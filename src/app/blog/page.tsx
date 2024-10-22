@@ -1,16 +1,10 @@
-import Link from "next/link";
 import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/client";
-import imageUrlBuilder from "@sanity/image-url";
-import { MdDateRange } from "react-icons/md";
-import { FaRegClock } from "react-icons/fa";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import BlogCard from "@/components/BlogCard";
-import { SanityImageSource } from "@sanity/image-url/lib/types/types";
-
-const builder = imageUrlBuilder(client);
-
+import { formatDate } from "../lib/utils";
+import { urlFor } from "../lib/displayImage";
 const POSTS_QUERY = `*[ 
   _type == "post" 
   && defined(slug.current)
@@ -18,20 +12,16 @@ const POSTS_QUERY = `*[
 
 const options = { next: { revalidate: 30 } };
 
-function urlFor(source: SanityImageSource) {
-  return builder.image(source);
-}
-
 export default async function IndexPage() {
   const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
 
   return (
     <div>
       <NavBar />
-      <div className="container mx-auto min-h-screen p-8">
+      <div className=" p-8">
         <div>
-          <h2 className="text-4xl text-gbWhite text-center">ÚLTIMOS BLOGS</h2>
-          <div className="grid grid-cols-6 gap-4">
+          <h2 className="text-4xl text-gbWhite text-center my-10">ÚLTIMOS BLOGS</h2>
+          <div className="grid grid-cols-12 w-full gap-9">
             {posts.map((post, index) => {
               const postImageUrl = post.image1
                 ? urlFor(post.image1).width(550).height(310).url()
@@ -41,19 +31,21 @@ export default async function IndexPage() {
                 ? urlFor(post.image2).width(550).height(310).url()
                 : "/images/banner.png"; 
 
+              const formattedDate = post.publishedAt ? formatDate(post.publishedAt) : undefined;
+
               return ( 
                 <BlogCard
                   key={post._id}
                   images={[postImageUrl, postImageUrl2]}
-                  date={post.publishedAt}
+                  formattedDate={formattedDate}
                   title={post.title}
                   id={post._id}
                   slug={post.slug.current}
                   articleType={post.postType}
                   readTime={post.readTime}
                   description={post.description}
-                  className={`hover:scale-105 opacity-90 hover:opacity-100 transition-all hover:cursor-pointer relative ${
-                    index < 2 ? "col-span-3 aspect-video" : "col-span-2 aspect-square"
+                  className={`hover:scale-[1.02] opacity-90 hover:opacity-100 transition-all hover:cursor-pointer relative ${
+                    index < 2 ? "col-span-12 lg:col-span-6 aspect-video" : "col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3 aspect-square"
                   }`}
                 />
               );
