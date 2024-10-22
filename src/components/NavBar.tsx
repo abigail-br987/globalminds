@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 const navItems = [
-  { name: "Home", to: "/", style: "bg-gbGreen" },
+  { name: "Inicio", to: "/", style: "bg-gbGreen" },
   { name: "Programas", to: "/programas", style: "bg-gbBlue" },
   { name: "Nosotros", to: "/nosotros", style: "bg-gbRed" },
   { name: "Contacto", to: "/contacto", style: "bg-gbYellow" },
