@@ -7,19 +7,22 @@
     @apply text-8xl font-bold font-lucidity; 
   }
   h2 {
-    @apply text-xl md:text-3xl font-semibold font-mono; 
+    @apply text-xl md:text-3xl font-semibold ; 
   }
   h3 {
-    @apply text-lg font-bold font-mono tracking-wide; 
+    @apply text-lg leading-4 font-bold font-mono tracking-wide; 
   }
   h4 {
     @apply text-base font-semibold font-mono tracking-wide; 
+  }
+  h5 {
+    @apply uppercase text-sm font-semibold; 
   }
   button {
     @apply px-4 py-1 my-2 font-semibold rounded-full; 
   }
   p {
-    @apply leading-5
+    @apply leading-5 my-1
   }
   body {
     @apply font-rubik text-gbWhite
