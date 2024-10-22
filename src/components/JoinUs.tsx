@@ -3,6 +3,7 @@ import { joinOptions } from "@/script/content";
 import { useState } from "react";
 import ButtonWithArrow from "./small_components/ButtonWithArrow";
 import Modal from "./Modal";
+import ColorfulTitle from "./small_components/ColorfulTitle";
 import { globalMindsColors } from "@/script/content";
 interface JoinOption {
   title: string;
@@ -24,7 +25,7 @@ const JoinUs: React.FC = () => {
 
   return (
     <div>
-      <h2 className="text-center text-gbWhite">Únete</h2>
+      <ColorfulTitle text="UNETE" className="m-auto"/>
       <div className="mt-6 mb-10 space-y-4 rounded text-gbWhite hyphens-auto">
         <div className="sm:grid max-sm:space-y-8 max-sm:block grid-cols-2 gap-10">
           {joinOptions.map((option, index) => (
@@ -35,13 +36,13 @@ const JoinUs: React.FC = () => {
               }`}
             >
               <div className={"flex-1"}>
-                <div className="flex items-center">
-                  {option.icon} {". "}
+                <div className="flex items-center space-x-2">
+                  {option.icon}
                   <h3 className="">{option.title}</h3>
                 </div>
                 <p>{option.description}</p>
                 <ButtonWithArrow
-                  className="bg-gbWhite bg-opacity-50"
+                  className=" bg-gbBlack text-gbWhite "
                   onClick={() => toggleModal(option)}
                 >
                   Más información
