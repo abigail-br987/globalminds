@@ -5,7 +5,7 @@ function Impact() {
   return (
     <div className="hyphens-auto text-gbWhite space-y-6">
       <div className="relative flex items-center justify-center w-full">
-        <ColorfulTitle text="IMPACTO" />
+        <ColorfulTitle text="IMPACTO"/>
       </div>
       <p>
         No solo ofrecemos asesoría académica y profesional gratuita que en otros
