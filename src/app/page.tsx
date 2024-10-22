@@ -15,7 +15,7 @@ function Home() {
       <NavBar />
       <Figures />
       <Landing />
-    <div className="max-w-screen-xl p-10 z-10 space-y-10">
+    <div className="max-w-screen-xl p-10 z-10 space-y-20">
        <Presentation/>
        <Photos
           images={[
