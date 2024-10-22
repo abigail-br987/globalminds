@@ -1,15 +1,9 @@
-import ProgramasComponent from "./Charlas";
+import ProgramasComponent from "./ProgramasComponent";
 import { type SanityDocument } from "next-sanity";
-import imageUrlBuilder from "@sanity/image-url";
 import { client } from "@/sanity/client";
-import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import { globalMindsColors } from "@/script/content";
-const builder = imageUrlBuilder(client);
-
-function urlFor(source: SanityImageSource | null): string | undefined {
-  return source ? builder.image(source).url() : undefined; 
-}
-
+import { urlFor } from "@/app/lib/displayImage";
+import { formatDate } from "@/app/lib/utils";
 const POSTS_QUERY = `*[ 
   _type == "offerings" 
 ] | order(publishedAt desc)[0...12]{ 
@@ -46,19 +40,25 @@ export default async function DetailedStructure() {
 
 
   return (
-    <div className="container mx-auto p-4 space-y-6 text-gbBlack ">
+    <div className="container mx-auto p-4 space-y-10 text-gbBlack ">
       {uniqueTypes.map((type, index) => {
         const color = globalMindsColors[index % globalMindsColors.length];
+        const columnClass =
+        type === "Mentores" ? "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6" : "sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5";
+  
         return (
           <div key={type} className="space-y-4">
             <h2 className="text-gbWhite">{type.toUpperCase()}</h2>
-            <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 ">
-              {groupedElements[type].map((element) => {
+            <div className={`grid ${columnClass} bg-${color} rounded-2xl gap-4 p-3`}>
+            {groupedElements[type].map((element) => {
+                
+                const formattedDate = element.time ? formatDate(element.time) : undefined;
+                
                 const componentProps = {
-                  photo: element.image && element.image.asset ? urlFor(element.image.asset) : undefined,
+                  photo: element.image && element.image.asset ? String(urlFor(element.image.asset)) : undefined,
                   emoji: element.emoji,
                   title: element.title,
-                  date: element.time,
+                  formattedDate: formattedDate,
                   mode: element.mode,
                   type: element.type,
                   sociallinks: element.sociallinks,
