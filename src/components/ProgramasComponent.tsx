@@ -3,8 +3,6 @@ import { FaLinkedin, FaInstagram, FaFacebook, FaGlobe } from "react-icons/fa";
 import { MdDateRange } from "react-icons/md";
 import { TbClockHour4 } from "react-icons/tb";
 import Image from "next/image";
-import { formatDate } from "@/app/lib/utils";
-import { getIconByType } from "@/app/lib/utils";
 
 interface FormattedDate {
   day: string;

@@ -1,4 +1,3 @@
-import { socialLinks } from "@/script/content";
 import SocialIcons from "./SocialIcons";
 const banner = "/images/banner3.png";
 

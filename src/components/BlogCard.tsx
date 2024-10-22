@@ -1,9 +1,6 @@
 import { MdDateRange } from "react-icons/md";
-import { FaRegClock } from "react-icons/fa";
-
 import Image from "next/image";
 import Link from "next/link";
-import { TbClockHour4 } from "react-icons/tb";
 import { getIconByType } from "@/app/lib/utils";
 interface FormattedDate {
   day: string;
@@ -30,11 +27,9 @@ const BlogCard: React.FC<BlogCardProps> = ({
   formattedDate,
   title,
   articleType,
-  readTime,
   id,
   slug,
   description,
-  onClick,
   className,
 }) => {
   return (
