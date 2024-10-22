@@ -9,12 +9,12 @@ function Donate() {
        objectFit="cover" className="w-full h-full object-cover" />
       </div>
       <div className="lg:pl-6 flex-shrink">
+      <ButtonWithArrow className="text-2xl font-bold bg-gbWhite text-gbBlack">Donar ahora</ButtonWithArrow>
         <ul>
           {donateMessage.map((message, index) => (
             <li key={index}>{message}</li>
           ))}
         </ul>
-        <ButtonWithArrow className="text-2xl font-bold bg-gbWhite text-gbBlack">Donar ahora</ButtonWithArrow>
       </div>
     </div>
   );
