@@ -5,10 +5,11 @@ import Footer from "@/components/Footer";
 import BlogCard from "@/components/BlogCard";
 import { formatDate } from "../lib/utils";
 import { urlFor } from "../lib/displayImage";
+
 const POSTS_QUERY = `*[ 
   _type == "post" 
   && defined(slug.current)
-]|order(publishedAt desc)[0...12]`;
+]|order(publishedAt asc)[0...12]`;
 
 const options = { next: { revalidate: 30 } };
 
