@@ -4,9 +4,10 @@ import { client } from "@/sanity/client";
 import { globalMindsColors } from "@/script/content";
 import { urlFor } from "@/app/lib/displayImage";
 import { formatDate } from "@/app/lib/utils";
+
 const POSTS_QUERY = `*[ 
   _type == "offerings" 
-] | order(publishedAt desc)[0...12]{ 
+] | order(publishedAt asc)[0...12]{ 
   _id, 
   title, 
   description, 
@@ -37,6 +38,7 @@ export default async function DetailedStructure() {
   );
 
   const uniqueTypes = Object.keys(groupedElements);
+  const currentDate = new Date();
 
 
   return (
@@ -51,9 +53,8 @@ export default async function DetailedStructure() {
             <h2 className="text-gbWhite">{type.toUpperCase()}</h2>
             <div className={`grid ${columnClass} bg-${color} rounded-2xl gap-4 p-3`}>
             {groupedElements[type].map((element) => {
-                
                 const formattedDate = element.time ? formatDate(element.time) : undefined;
-                
+                const isPast = element.time && new Date(element.time) < currentDate;
                 const componentProps = {
                   photo: element.image && element.image.asset ? String(urlFor(element.image.asset)) : undefined,
                   emoji: element.emoji,
@@ -66,6 +67,7 @@ export default async function DetailedStructure() {
                   description: element.description,
                   linkName: element.linkName,
                   url: element.url,
+                  past: isPast,
                 };
                 return (
                   <div key={element._id} className="">
