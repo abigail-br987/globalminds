@@ -27,27 +27,27 @@ const figures = [
   },
   {
     Component: Figure3,
-    className: "h-80 rotate-180 fill-gbGreen",
+    className: "h-80 rotate-180 fill-gbGreen max-sm:hidden",
     className2: "-right-32 bottom-10 max-2xl:hidden ",
   },
   {
     Component: Figure3,
-    className: "h-56 fill-gbYellow",
+    className: "h-56 fill-gbYellow max-sm:hidden",
     className2: "-right-32 top-44 max-2xl:hidden ",
   },
   {
     Component: Figure11,
-    className: "h-56 fill-gbBlue",
+    className: "h-56 fill-gbBlue max-sm:hidden",
     className2: "",
   },
   {
     Component: Figure12,
-    className: "h-56 fill-gbRed",
+    className: "h-56 fill-gbRed max-sm:hidden",
     className2: "bottom-10 right-64",
   },
   {
     Component: Figure12,
-    className: "h-24 rotate-45 fill-gbYellow",
+    className: "h-24 rotate-45 fill-gbYellow max-sm:hidden",
     className2: "top-46 right-80",
   },
 
