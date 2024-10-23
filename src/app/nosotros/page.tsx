@@ -16,8 +16,9 @@ export default async function Nosotros() {
 
         <div className="p-10">
           <OurTeamServer />
-          <FollowUs />
         </div>
+        <FollowUs />
+
         <Footer />
       </div>
 
