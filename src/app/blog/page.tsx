@@ -46,7 +46,7 @@ export default async function IndexPage() {
                   readTime={post.readTime}
                   description={post.description}
                   className={`hover:scale-[1.02] opacity-90 hover:opacity-100 transition-all hover:cursor-pointer relative ${
-                    index < 2 ? "col-span-12 lg:col-span-6 aspect-video" : "col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3 aspect-square"
+                    index < 2 ? "col-span-12 lg:col-span-6 max-sm:aspect-square sm:aspect-video" : "col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3 aspect-square"
                   }`}
                 />
               );
