@@ -10,11 +10,11 @@ const Photos: React.FC<PhotosProps> = ({ images }) => {
       <div
         className={`gap-6 space-y-6 ${
           images.length === 1
-            ? "columns-1"
+            ? "sm:columns-1"
             : images.length === 2
-            ? "columns-2"
+            ? "sm:columns-2"
             : images.length === 3 || images.length > 3
-            ? "columns-3"
+            ? "sm:columns-3"
             : ""
         }`}
       >

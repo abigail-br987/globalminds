@@ -11,9 +11,9 @@ function Structure() {
           {structureItems.map((item, index) => (
             <div
               className={`relative py-6 px-3 
-       ${index === 0 ? "border-b border-r" : ""} 
-       ${index === 1 ? "border-b" : ""} 
-       ${index === 2 ? "border-r" : ""} 
+       ${index === 0 ? "border-b sm:border-r  " : ""} 
+       ${index === 1 ? "sm:border-b" : ""} 
+       ${index === 2 ? "sm:border-r max-sm:border-b" : ""} 
        border-gbWhite`}
               key={index}
             >

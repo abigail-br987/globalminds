@@ -11,9 +11,9 @@ const navItems = [
 
 function NavBar() {
   return (
-    <nav className="p-2 fixed w-full top-0 z-50 font-mono">
+    <nav className="p-2 max-sm:text-sm fixed w-full top-0 z-50 font-mono">
       <ul className="items-start flex justify-between">
-        <Link href={"/home"} className="cursor-pointer flex space-x-3">
+        <Link href={"/home"} className="max-sm:hidden cursor-pointer flex space-x-3">
           <div className="py-1 px-2 bg-gbBlack h-max rounded-md space-x-2 font-mono font-bold flex items-center">
             <Image
               src={"/logo/mainlogo.png"}
