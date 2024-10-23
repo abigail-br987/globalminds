@@ -22,7 +22,7 @@ export default async function IndexPage() {
       <div className=" p-8">
         <div>
           <h2 className="text-4xl text-gbWhite text-center my-10">ÚLTIMOS BLOGS</h2>
-          <div className="grid grid-cols-12 w-full gap-9">
+          <div className="grid grid-cols-12 w-full sm:gap-9">
             {posts.map((post, index) => {
               const postImageUrl = post.image1
                 ? urlFor(post.image1).width(550).height(310).url()
