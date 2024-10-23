@@ -1,5 +1,6 @@
 import { globalMindsColors } from "@/script/content";
 import AnimatedDiv from "./small_components/AnimatedDiv";
+import Image from "next/image";
 interface PhotosProps {
   images: string[];
 }
@@ -31,10 +32,13 @@ const Photos: React.FC<PhotosProps> = ({ images }) => {
             ];
           console.log(randomColor);
           return (
-            <img
+            <Image
               key={idx}
               className={`w-full max-h-96 h-auto object-cover rounded-lg shadow-lg border-[10px] ${rotationClass} border-${randomColor}`}
               src={src} 
+              layout="responsive"
+              width={100}
+              height={100}
               alt={`Image ${idx + 1}`}
             />
           );

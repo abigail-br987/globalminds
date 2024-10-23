@@ -1,6 +1,7 @@
 "use client";
 import Star9sides from "@/svg/Star9sides";
 import AnimatedDiv from "./small_components/AnimatedDiv";
+import Image from "next/image";
 interface ContentItem {
   title: string;
   description: string;
