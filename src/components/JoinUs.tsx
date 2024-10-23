@@ -3,6 +3,7 @@ import { joinOptions } from "@/script/content";
 import { useState } from "react";
 import ButtonWithArrow from "./small_components/ButtonWithArrow";
 import Modal from "./Modal";
+import AnimatedDiv from "./small_components/AnimatedDiv";
 import ColorfulTitle from "./small_components/ColorfulTitle";
 import { globalMindsColors } from "@/script/content";
 interface JoinOption {
@@ -24,7 +25,7 @@ const JoinUs: React.FC = () => {
   };
 
   return (
-    <div>
+    <AnimatedDiv>
       <ColorfulTitle text="UNETE" className="m-auto"/>
       <div className="mt-6 mb-10 space-y-4 rounded text-gbWhite hyphens-auto">
         <div className="sm:grid max-sm:space-y-8 max-sm:block grid-cols-2 gap-10">
@@ -71,7 +72,7 @@ const JoinUs: React.FC = () => {
           </>
         )}
       </Modal>
-    </div>
+    </AnimatedDiv>
   );
 };
 

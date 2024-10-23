@@ -1,9 +1,10 @@
 import { donateMessage } from "@/script/content";
 import ButtonWithArrow from "./small_components/ButtonWithArrow";
+import AnimatedDiv from "./small_components/AnimatedDiv";
 import Image from "next/image";
 function Donate() {
   return (
-    <div className="flex text-gbWhite items-center">
+    <AnimatedDiv className="flex text-gbWhite items-center">
       <div className="flex-shrink-0 basis-1/6 max-lg:hidden">
         <Image  src={"/logo/mainlogo.png"} alt="image"  layout="responsive" width={100} height={100}
        objectFit="cover" className="w-full h-full object-cover" />
@@ -16,7 +17,7 @@ function Donate() {
           ))}
         </ul>
       </div>
-    </div>
+    </AnimatedDiv>
   );
 }
 

@@ -1,10 +1,11 @@
 "use client"
 import { structureItems } from "@/script/content";
 import ColorfulTitle from "./small_components/ColorfulTitle";
+import AnimatedDiv from "./small_components/AnimatedDiv";
 function Structure() {
   return (
     <>
-      <div className="text-center my-5  text-gbWhite flex flex-col items-center cursor-pointer">
+      <AnimatedDiv className="text-center my-5  text-gbWhite flex flex-col items-center cursor-pointer">
         <ColorfulTitle text="STRUCTURE" />
         <div className="grid grid-cols-1 md:grid-cols-2 text-center">
           {structureItems.map((item, index) => (
@@ -24,7 +25,7 @@ function Structure() {
             </div>
           ))}
         </div>
-      </div>
+      </AnimatedDiv>
     </>
   );
 }

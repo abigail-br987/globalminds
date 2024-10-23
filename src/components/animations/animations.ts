@@ -3,8 +3,8 @@ export const animations = {
   sectionVariant: {
     offscreen: {
       opacity: 0,
-      scale: 0.7,
-      y: 20,
+      scale: 0.8,
+      y: 10,
     },
     onscreen: {
       opacity: 1,
@@ -13,7 +13,7 @@ export const animations = {
       transition: {
         type: "spring",
         bounce: 0.4,
-        duration: 0.8,
+        duration: 0.4,
       },
     },
   },

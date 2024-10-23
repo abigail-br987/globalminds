@@ -1,9 +1,9 @@
 import ColorfulTitle from "./small_components/ColorfulTitle";
 import { impactData } from "@/script/content";
-
+import AnimatedDiv from "./small_components/AnimatedDiv";
 function Impact() {
   return (
-    <div className="hyphens-auto text-gbWhite space-y-6">
+    <AnimatedDiv className="hyphens-auto text-gbWhite space-y-6">
       <div className="relative flex items-center justify-center w-full">
         <ColorfulTitle text="IMPACTO"/>
       </div>
@@ -24,7 +24,7 @@ function Impact() {
         {/*
         <button className="bg-gbWhite text-gbBlack h-max self-center py-4 rounded-xl"> <p> Leer Testimonios </p><FaReadme className="text-3xl m-auto"/> </button>
       */} </div>
-    </div>
+    </AnimatedDiv>
   );
 }
 

@@ -1,10 +1,11 @@
 import { globalMindsColors } from "@/script/content";
+import AnimatedDiv from "./small_components/AnimatedDiv";
 interface PhotosProps {
   images: string[];
 }
 const Photos: React.FC<PhotosProps> = ({ images }) => {
   return (
-    <div className="relative">
+    <AnimatedDiv className="relative">
       <div
         className={`gap-6 space-y-6 ${
           images.length === 1
@@ -39,7 +40,7 @@ const Photos: React.FC<PhotosProps> = ({ images }) => {
           );
         })}
       </div>
-    </div>
+    </AnimatedDiv>
   );
 }
 
