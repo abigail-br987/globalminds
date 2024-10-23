@@ -23,6 +23,7 @@ interface Props {
   type: string;
   sociallinks?: { platform: string; url: string }[];
   mode?: string;
+  past?: boolean;
 }
 
 const ProgramasComponent: React.FC<Props> = ({
@@ -36,6 +37,7 @@ const ProgramasComponent: React.FC<Props> = ({
   sociallinks,
   type,
   url,
+  past,
 }) => {
   const renderSocialIcon = (platform: string) => {
     switch (platform) {
@@ -52,7 +54,7 @@ const ProgramasComponent: React.FC<Props> = ({
     }
   };
   return (
-    <div className={`rounded-lg h-full bg-gbWhite relative`}>
+    <div className={`rounded-lg h-full bg-gbWhite relative ${past ? 'opacity-50' : ''}`}>
       <div
         className={`relative rounded-lg ${type === "Mentores" ? "aspect-square" : "h-64"} `}
       >
