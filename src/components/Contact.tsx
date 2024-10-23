@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
   };
   
   return (
-    <section className="grid grid-cols-2 w-full gap-10">
+    <section className="sm:grid sm:grid-cols-2 w-full gap-10">
       <div className="space-y-3">
         <header>
           <h2 className="mb-3">¡Queremos Conocerte!</h2>

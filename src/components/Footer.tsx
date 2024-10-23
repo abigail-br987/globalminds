@@ -8,7 +8,7 @@ function Footer() {
         <p>Num +5199999999</p>
         <p>@correoelectronico</p>
       </div>
-      <div className=" space-y-5 flex flex-col items-center">
+      <div className=" space-y-5 flex flex-col items-center max-sm:w-full justify-center">
         <h3>GLOBAL MINDS</h3>
         <ul className="flex space-x-5">
           <li>FAQs</li>

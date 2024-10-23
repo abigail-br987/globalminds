@@ -11,7 +11,7 @@ const Contacto = () => {
         className="w-full h-64 bg-cover bg-center flex justify-center items-center"
         style={{ backgroundImage: `url(${"/images/banner.png"})` }}
       >
-        <h1 style={{ textShadow: "3px 3px 2px rgba(2, 2, 2, 2)" }} className="">
+        <h1 style={{ textShadow: "3px 3px 2px rgba(2, 2, 2, 2)" }} className="max-sm:text-base">
           CONTÁCTANOS
         </h1>
       </div>

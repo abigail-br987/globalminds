@@ -26,7 +26,7 @@ function NavBar() {
             <span>GLOBAL MINDS</span>
           </div>
         </Link>
-        <div className="flex space-x-2 md:space-x-4 py-1 bg-gbBlack z-0 rounded-md px-3">
+        <div className="max-sm:w-full flex space-x-2 md:space-x-4 py-1 bg-gbBlack z-0 rounded-md px-3">
           {navItems.map((item, index) => (
             <Link href={item.to} key={index}>
               <li

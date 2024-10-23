@@ -13,7 +13,7 @@ function Structure() {
               className={`relative py-6 px-3 
        ${index === 0 ? "border-b sm:border-r  " : ""} 
        ${index === 1 ? "sm:border-b" : ""} 
-       ${index === 2 ? "sm:border-r max-sm:border-b" : ""} 
+       ${index === 2 ? "sm:border-r max-sm:border-b max-sm:border-t" : ""} 
        border-gbWhite`}
               key={index}
             >
