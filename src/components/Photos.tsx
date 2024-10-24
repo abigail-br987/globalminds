@@ -33,7 +33,7 @@ const Photos: React.FC<PhotosProps> = ({ images }) => {
             ];
           console.log(randomColor);
           return (
-            <AnimatedDiv2>
+            <AnimatedDiv2 key={idx}>
             <Image
               key={idx}
               className={`w-full max-h-96 h-auto object-cover rounded-lg shadow-lg border-[10px] ${rotationClass} border-${randomColor}`}
