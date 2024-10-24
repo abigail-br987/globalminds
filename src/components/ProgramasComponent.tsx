@@ -12,13 +12,12 @@ interface FormattedDate {
 }
 
 interface Props {
-  emoji: string;
+  emoji?: string;
   title: string;
   photo?: string;
   formattedDate?: FormattedDate;
   description: string;
-  linkName: string;
-  url: string;
+  url?: string;
   color: string;
   type: string;
   sociallinks?: { platform: string; url: string }[];
@@ -54,7 +53,12 @@ const ProgramasComponent: React.FC<Props> = ({
     }
   };
   return (
-    <div className={`rounded-lg h-full bg-gbWhite relative ${past ? 'opacity-50' : ''}`}>
+    <div className={`rounded-lg h-full bg-gbWhite relative ${past ? 'opacity-70 cursor-not-allowed' : ''}`}>
+      {past && (
+        <h3 className={`absolute top-0 font-gotaRegular left-0 w-full py-3 px-1 bg-${color} text-center z-10`}>
+          FINALIZADO
+        </h3>
+      )}
       <div
         className={`relative rounded-lg ${type === "Mentores" ? "aspect-square" : "h-64"} `}
       >
