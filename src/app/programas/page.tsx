@@ -9,9 +9,9 @@ function Programas() {
   return (
     <div className="flex flex-col justify-center items-center m-auto bg-gbBlack">
       <NavBar />
-      <Header image={banner}>.</Header>
-
-      <DetailedStructure />
+      <Header image={"/images/banner.png"}></Header>
+      <div className="p-6 mt-4"> 
+      <DetailedStructure /></div>
       <Footer />
     </div>
   );
