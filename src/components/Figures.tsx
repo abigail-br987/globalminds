@@ -40,44 +40,37 @@ const figures = [
   {
     Component: Figure11,
     className: "h-52",
-    className2: "bottom-20 right-24",
-    color: "gbRed",
+    className2: "bottom-20 right-24 fill-gbGreen",
   },
   {
     Component: Figure13,
     className: "h-24 rotate-12",
-    className2: "bottom-16 right-96 hidden 2xl:block",
-    color: "gbYellow ",
+    className2: "bottom-16 right-96 hidden 2xl:block fill-gbBlue",
   },
   {
     Component: Figure13,
     className: "h-32 rotate-45",
-    className2: "top-96 right-96 hidden 2xl:block",
-    color: "gbBlue ",
+    className2: "top-96 right-96 hidden 2xl:block fill-gbRed",
   },
   {
     Component: Figure13,
     className: "h-32 rotate-180",
-    className2: "top-80 left-96 hidden 2xl:block",
-    color: "gbGreen",
+    className2: "top-80 left-96 hidden 2xl:block fill-gbYellow",
   },
   {
     Component: Figure11,
     className: "h-20 -rotate-45",
-    className2: "top-20 left-48",
-    color: "gbRed max-lg:hidden",
+    className2: "top-20 left-48 fill-gbYellow",
   },
   {
     Component: Figure12,
     className: "h-16",
-    className2: "top-14 right-96",
-    color: "gbBlue",
+    className2: "top-14 right-96 fill-gbBlue",
   },
   {
     Component: Figure12,
     className: "h-24 -rotate-45",
-    className2: "bottom-20 left-72",
-    color: "gbGreen max-lg:hidden",
+    className2: "bottom-20 left-72 fill-gbBlue",
   },
 ];
 
@@ -90,7 +83,7 @@ function Figures() {
 
   return (
     <div className="fixed flex justify-center items-center h-screen w-full -top-10 z-0">
-      {figures.map(({ Component, className, className2, color }, index) => {
+      {figures.map(({ Component, className, className2 }, index) => {
         return (
           <motion.span
             key={index}
@@ -103,7 +96,7 @@ function Figures() {
               opacity: opacityTransform,
             }}
           >
-            <Component className={className} color={color} />
+            <Component className={className} />
           </motion.span>
         );
       })}
