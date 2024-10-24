@@ -48,8 +48,7 @@ const Contact: React.FC = () => {
         <header>
           <h2 className="mb-3">¡Queremos Conocerte!</h2>
           <p>
-            Si eres una persona con ganas de __ o ____ fewfweewfew ewf ew fewf
-            ew few few fwe fewfwfewfwfe few few fewf wefwe fwef ew¡Escríbenos!
+            
           </p>
         </header>
         <div>
