@@ -4,9 +4,10 @@ import Image from "next/image";
 interface PhotosProps {
   images: string[];
 }
+import AnimatedDiv2 from "./small_components/AnimatedDiv2";
 const Photos: React.FC<PhotosProps> = ({ images }) => {
   return (
-    <AnimatedDiv className="relative">
+    <AnimatedDiv key={2} className="relative">
       <div
         className={`gap-6 space-y-6 ${
           images.length === 1
@@ -32,6 +33,7 @@ const Photos: React.FC<PhotosProps> = ({ images }) => {
             ];
           console.log(randomColor);
           return (
+            <AnimatedDiv2>
             <Image
               key={idx}
               className={`w-full max-h-96 h-auto object-cover rounded-lg shadow-lg border-[10px] ${rotationClass} border-${randomColor}`}
@@ -40,7 +42,7 @@ const Photos: React.FC<PhotosProps> = ({ images }) => {
               width={100}
               height={100}
               alt={`Image ${idx + 1}`}
-            />
+            /> </AnimatedDiv2>
           );
         })}
       </div>
