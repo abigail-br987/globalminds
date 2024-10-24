@@ -1,5 +1,4 @@
 import ProgramasComponent from "./ProgramasComponent";
-import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/client";
 import { globalMindsColors } from "@/script/content";
 import { urlFor } from "@/app/lib/displayImage";

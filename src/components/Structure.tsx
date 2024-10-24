@@ -5,7 +5,6 @@ import AnimatedDiv from "./small_components/AnimatedDiv";
 import AnimatedDiv3 from "./small_components/AnimatedDiv3";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import { globalMindsColors } from "@/script/content";
 
 function Structure() {
   const containerRef = useRef<HTMLDivElement | null>(null);

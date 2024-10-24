@@ -9,7 +9,8 @@ interface AnimatedDivProps {
 }
 const AnimatedDiv2 = ({ children, className = "", isInViewContainer }: AnimatedDivProps) => {
   const ref = useRef<HTMLDivElement | null>(null);
-    const isInView = isInViewContainer !== undefined ? isInViewContainer : useInView(ref, { once: false, margin: "-40% 0px" });
+  const isInViewContainer_ = useInView(ref, { once: false, margin: "-40% 0px" })
+  const isInView = isInViewContainer !== undefined ? isInViewContainer : isInViewContainer_ ;
 
   return (
     <motion.div
