@@ -77,9 +77,9 @@ const figures = [
 function Figures() {
   const { scrollY } = useScroll();
 
-  const rotateTransform = useTransform(scrollY, [0, 1000], [0, -20]);
-  const scaleTransform = useTransform(scrollY, [0, 1000], [1, 1.2]);
-  const opacityTransform = useTransform(scrollY, [0, 1000], [1, 0.01]);
+  const rotateTransform = useTransform(scrollY, [0, 1400], [0, -20]);
+  const scaleTransform = useTransform(scrollY, [0, 1400], [1, 1.2]);
+  const opacityTransform = useTransform(scrollY, [0, 1400], [1, 0.01]);
 
   return (
     <div className="fixed flex justify-center items-center h-screen w-full -top-10 z-0">
