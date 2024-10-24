@@ -81,3 +81,17 @@ export const animations = {
     },
   },
 };
+
+export const animations2 = {
+  variants: {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  },
+  initial: ["hidden"],
+  whileInView: ["visible"],
+  exit: ["hidden"],
+  viewport: {
+    amount: 0.4,
+  },
+  transition: { type: "spring", duration: 1, bounce: 0 },
+};
