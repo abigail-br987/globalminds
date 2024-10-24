@@ -136,7 +136,7 @@ export const structureItems = [
     figure: (
       <Figure11
         color="gbGreen"
-        className="w-10 absolute -rotate-45 z-0 opacity-50"
+        className="w-10 absolute -rotate-45 z-0 fill-gbBlue"
       />
     ),
   },
@@ -147,7 +147,7 @@ export const structureItems = [
     figure: (
       <Figure12
         color="gbBlue"
-        className="w-10 absolute -rotate-45 z-0 opacity-50"
+        className="w-10 absolute -rotate-45 z-0  fill-gbRed"
       />
     ),
   },
@@ -158,7 +158,7 @@ export const structureItems = [
     figure: (
       <Figure12
         color="gbRed"
-        className="w-10 absolute rotate-45 z-0 opacity-50"
+        className="w-10 absolute rotate-45 z-0  fill-gbYellow"
       />
     ),
   },
@@ -166,7 +166,7 @@ export const structureItems = [
     title: "Conectar",
     description:
       "Crear una comunidad de apoyo y networking entre estudiantes y mentores para fomentar la colaboración y el intercambio de experiencias.",
-    figure: <Figure3 className="w-10 absolute -rotate-45 z-0 opacity-50" />,
+    figure: <Figure3 className="w-10 absolute -rotate-45 z-0  fill-gbGreen" />,
   },
 ];
 
