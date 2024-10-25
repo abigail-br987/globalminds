@@ -36,11 +36,11 @@ interface ProcessedOffering extends Offering {
   formattedDate?: { day: string; month: string; hour: string; minutes: string } | undefined;
 }
 
-interface itemsProps {
+interface ItemsProps {
   items: SanityDocument[];
 }
 
-export default function DetailedStructure({ items }: itemsProps) {
+export default function DetailedStructure({ items }: ItemsProps) {
   const currentDate = new Date();
 
   if (!items || items.length === 0) {
@@ -50,7 +50,7 @@ export default function DetailedStructure({ items }: itemsProps) {
   const processedElements: ProcessedOffering[] = items.map((element) => {
     const isPast = element.time ? new Date(element.time) < currentDate : false;
     const formattedDate = element.time ? formatDate(element.time) : undefined;
-  
+
     return {
       _id: element._id,
       title: element.title || "Untitled",
@@ -63,10 +63,10 @@ export default function DetailedStructure({ items }: itemsProps) {
       time: element.time || "",
       image: element.image || undefined,
       isPast,
-      formattedDate
+      formattedDate,
     };
   });
-  
+
   processedElements.sort((a, b) => {
     if (a.isPast === b.isPast) {
       return new Date(a.time || "").getTime() - new Date(b.time || "").getTime();
@@ -85,6 +85,9 @@ export default function DetailedStructure({ items }: itemsProps) {
 
   const uniqueTypes = Object.keys(groupedElements);
 
+  const containerRefs = uniqueTypes.map(() => useRef<HTMLDivElement | null>(null));
+  const inViewStates = containerRefs.map(ref => useInView(ref, { once: false, margin: "-40% 0px" }));
+
   return (
     <div className="container mx-auto space-y-10 text-gbBlack">
       {uniqueTypes.map((type, index_) => {
@@ -94,14 +97,11 @@ export default function DetailedStructure({ items }: itemsProps) {
             ? "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
             : "sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5";
 
-        const containerRef = useRef<HTMLDivElement | null>(null);
-        const isInView = useInView(containerRef, { once: false, margin: "-40% 0px" });
- 
         return (
           <AnimatedDiv key={type} className="space-y-4">
             <h2 className="text-gbWhite">{type.toUpperCase()}</h2>
             <div
-              ref={containerRef}
+              ref={containerRefs[index_]} // Use the corresponding ref for this type
               className={`grid p-1 ${columnClass} bg-${color} rounded-2xl gap-4 p-3`}
             >
               {groupedElements[type].map((element, index) => {
@@ -126,7 +126,7 @@ export default function DetailedStructure({ items }: itemsProps) {
                 };
 
                 return (
-                  <AnimatedDiv3 isInView={isInView} index={index} key={index}>
+                  <AnimatedDiv3 isInView={inViewStates[index_]} index={index} key={index}>
                     <ProgramasComponent {...componentProps} />
                   </AnimatedDiv3>
                 );
