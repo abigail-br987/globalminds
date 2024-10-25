@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+
 const navItems = [
   { name: "Inicio", to: "/", style: "bg-gbGreen" },
   { name: "Programas", to: "/programas", style: "bg-gbBlue" },
@@ -11,7 +12,12 @@ const navItems = [
 
 function NavBar() {
   return (
-    <nav className="p-2 max-sm:text-sm fixed w-full top-0 z-50 font-mono">
+    <nav
+    className="p-2 pb-10 max-sm:text-sm fixed w-full top-0 z-50 font-mono"
+    style={{
+      background: "linear-gradient(180deg, #2B2B2B 20%, rgba(43, 43, 43, 0.7) 50%, rgba(43, 43, 43, 0) 100%)",
+    }}
+  >
       <ul className="items-start flex justify-between">
         <Link href={"/home"} className="max-sm:hidden cursor-pointer flex space-x-3">
           <div className="py-1 px-2 bg-gbBlack h-max rounded-md space-x-2 font-mono font-bold flex items-center">
