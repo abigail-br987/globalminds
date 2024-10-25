@@ -101,7 +101,7 @@ export default function DetailedStructure({ items }: ItemsProps) {
           <AnimatedDiv key={type} className="space-y-4">
             <h2 className="text-gbWhite">{type.toUpperCase()}</h2>
             <div
-              ref={containerRefs[index_]} // Use the corresponding ref for this type
+              ref={containerRefs[index_]}
               className={`grid p-1 ${columnClass} bg-${color} rounded-2xl gap-4 p-3`}
             >
               {groupedElements[type].map((element, index) => {
