@@ -43,8 +43,6 @@ interface ItemsProps {
 export default function DetailedStructure({ items }: ItemsProps) {
   const currentDate = new Date();
 
-
-
   const processedElements: ProcessedOffering[] = items.map((element) => {
     const isPast = element.time ? new Date(element.time) < currentDate : false;
     const formattedDate = element.time ? formatDate(element.time) : undefined;
@@ -84,12 +82,12 @@ export default function DetailedStructure({ items }: ItemsProps) {
   const uniqueTypes = Object.keys(groupedElements);
 
   const containerRefs = uniqueTypes.map(() => useRef<HTMLDivElement | null>(null));
-  const inViewStates = containerRefs.map(ref => useInView(ref, { once: false, margin: "-40% 0px" }));
+  const inViewStates = uniqueTypes.map((_, index) => useInView(containerRefs[index], { once: false, margin: "-40% 0px" }));
 
   if (!items || items.length === 0) {
     return <p>No programs available.</p>;
   }
-  
+
   return (
     <div className="container mx-auto space-y-10 text-gbBlack">
       {uniqueTypes.map((type, index_) => {
@@ -108,10 +106,7 @@ export default function DetailedStructure({ items }: ItemsProps) {
             >
               {groupedElements[type].map((element, index) => {
                 const componentProps = {
-                  photo:
-                    element.image && element.image.asset
-                      ? String(urlFor(element.image.asset))
-                      : undefined,
+                  photo: element.image && element.image.asset ? String(urlFor(element.image.asset)) : undefined,
                   emoji: element.emoji,
                   title: element.title,
                   formattedDate: element.formattedDate,
