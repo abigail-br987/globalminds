@@ -96,7 +96,7 @@ export default function DetailedStructure({ items }: itemsProps) {
 
         const containerRef = useRef<HTMLDivElement | null>(null);
         const isInView = useInView(containerRef, { once: false, margin: "-40% 0px" });
-
+ 
         return (
           <AnimatedDiv key={type} className="space-y-4">
             <h2 className="text-gbWhite">{type.toUpperCase()}</h2>
