@@ -10,6 +10,8 @@ import { location } from "@/script/content";
 import { number } from "@/script/content";
 import SocialIcons from "./SocialIcons";
 import { email } from "@/script/content";
+import { motion } from "framer-motion"; 
+
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -41,15 +43,18 @@ const Contact: React.FC = () => {
       setStatus("An error occurred. Please try again.");
     }
   };
-  
+
   return (
     <section className="sm:grid sm:grid-cols-2 w-full gap-10">
-      <div className="space-y-3">
+      <motion.div
+        className="space-y-3"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1}}
+      >
         <header>
           <h2 className="mb-3">¡Queremos Conocerte!</h2>
-          <p>
-            
-          </p>
+          <p></p>
         </header>
         <div>
           <h3 className="text-lg font-semibold">Información de Contacto</h3>
@@ -66,8 +71,14 @@ const Contact: React.FC = () => {
           </ul>
         </div>
         <SocialIcons />
-      </div>
-      <form onSubmit={handleSubmit} className="text-gbBlack">
+      </motion.div>
+      <motion.form
+        onSubmit={handleSubmit}
+        className="text-gbBlack"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay:0.2}}
+      >
         <div className="py-3 flex flex-col">
           <input
             type="text"
@@ -104,14 +115,12 @@ const Contact: React.FC = () => {
           />
         </div>
         <div className="float-right">
-          <ButtonWithArrow className="bg-gbGreen ">
-          Send Message
-
+          <ButtonWithArrow className="bg-gbGreen">
+            Send Message
           </ButtonWithArrow>
-
         </div>
-      </form>
-      {status && <p className="">{status}</p>}
+      </motion.form>
+      {status && <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>{status}</motion.p>}
     </section>
   );
 };

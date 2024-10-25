@@ -3,7 +3,6 @@
 import NavBar from "@/components/NavBar";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import AnimatedDiv from "@/components/small_components/AnimatedDiv";
 const Contacto = () => {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-gbBlack text-white">
@@ -15,9 +14,9 @@ const Contacto = () => {
           CONTÁCTANOS
         </h1>
       </div>
-      <AnimatedDiv className="max-w-screen-xl p-10 z-10 space-y-20">
+      <div className="max-w-screen-xl p-10 z-10 space-y-20">
         <Contact />
-      </AnimatedDiv>
+      </div>
       <NavBar />
       <Footer />
     </div>
