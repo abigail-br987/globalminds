@@ -4,7 +4,6 @@ import { globalMindsColors } from "@/script/content";
 import { urlFor } from "@/app/lib/displayImage";
 import { formatDate } from "@/app/lib/utils";
 import AnimatedDiv from "./small_components/AnimatedDiv";
-import AnimatedDiv3 from "./small_components/AnimatedDiv3";
 import { SanityDocument } from "next-sanity";
 
 interface ImageAsset {
@@ -117,7 +116,7 @@ export default function DetailedStructure({ items }: ItemsProps) {
                 };
 
                 return (
-                    <ProgramasComponent {...componentProps} />
+                    <ProgramasComponent {...componentProps} key={index} />
                 );
               })}
             </div>
