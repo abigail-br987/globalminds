@@ -25,7 +25,7 @@ const AnimatedDiv3 = ({
       type: "spring",
       stiffness: 300,
       damping: 20,
-      delay: isInView ? index * 0.05 : 0,
+      delay: isInView ? index * 0.15 : 0,
     },
   };
 
