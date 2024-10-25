@@ -1,3 +1,4 @@
+"use client"
 import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/client";
 import NavBar from "@/components/NavBar";
