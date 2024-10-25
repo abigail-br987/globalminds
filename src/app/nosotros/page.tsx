@@ -14,7 +14,7 @@ export default async function Nosotros() {
         <Header image={banner} />
         <NavBar />
 
-        <div className="p-10">
+        <div className="p-6">
           <OurTeamServer />
         </div>
         <FollowUs />
