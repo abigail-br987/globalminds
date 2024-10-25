@@ -6,6 +6,10 @@ import { SanityDocument } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import { client } from "@/sanity/client";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
+import AnimatedDiv3 from "./small_components/AnimatedDiv3";
+import AnimatedDiv from "./small_components/AnimatedDiv";
 const builder = imageUrlBuilder(client);
 
 function urlFor(source: SanityImageSource) {
@@ -17,6 +21,9 @@ interface OurTeamProps {
 }
 
 export default function OurTeam({ members }: OurTeamProps) {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const isInView = useInView(containerRef, { once: false, margin: "-40% 0px" });
+
   const [selectedMember, setSelectedMember] = useState<number | null>(null);
 
   const handleMemberClick = (index: number) => {
@@ -32,8 +39,8 @@ export default function OurTeam({ members }: OurTeamProps) {
   }
 
   return (
-    <div className="max-w-screen-xl my-10 m-auto">
-      <div className="max-w-lg mb-6">
+    <div  className="max-w-screen-xl my-10 m-auto">
+      <div  className="max-w-lg mb-6">
         <p>Conoce al Equipo detrás de </p>
         <h2>GlobalMinds</h2>
         <p className="mt-3">
@@ -42,14 +49,13 @@ export default function OurTeam({ members }: OurTeamProps) {
           mentoría personalizada.
         </p>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 h-min gap-6">
+      <AnimatedDiv  className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 h-min gap-6">
         {members.map((member, index) => {
           const postImageUrl = member.photo
             ? urlFor(member.photo).width(550).height(310).url()
             : "/image/banner.png";
           return (
             <div
-              key={index}
               onClick={() => handleMemberClick(index)}
               className="group relative transition-transform cursor-pointer hover:scale-105 "
             >
@@ -68,7 +74,7 @@ export default function OurTeam({ members }: OurTeamProps) {
             </div>
           );
         })}
-      </div>
+      </AnimatedDiv>
 
       <Modal isOpen={selectedMember !== null} onClose={handleCloseModal}>
         {selectedMember !== null && (

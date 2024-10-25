@@ -33,7 +33,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
   className,
 }) => {
   return (
-    <div className={`relative ${className}`}>
+    <div className={`${className} w-full h-full`}>
       <Link key={id} href={`/blog/${slug}`}>
         <figure className="w-full h-3/5 overflow-hidden relative">
           <Image

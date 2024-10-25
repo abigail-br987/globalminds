@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import AnimatedDiv from "@/components/small_components/AnimatedDiv";
 const Contacto = () => {
   return (
-    <AnimatedDiv className="flex flex-col justify-center items-center min-h-screen bg-gbBlack text-white">
+    <div className="flex flex-col justify-center items-center min-h-screen bg-gbBlack text-white">
       <div
         className="w-full h-64 bg-cover bg-center flex justify-center items-center"
         style={{ backgroundImage: `url(${"/images/banner.png"})` }}
@@ -15,12 +15,12 @@ const Contacto = () => {
           CONTÁCTANOS
         </h1>
       </div>
-      <div className="max-w-screen-xl p-10 z-10 space-y-20">
+      <AnimatedDiv className="max-w-screen-xl p-10 z-10 space-y-20">
         <Contact />
-      </div>
+      </AnimatedDiv>
       <NavBar />
       <Footer />
-    </AnimatedDiv>
+    </div>
   );
 };
 

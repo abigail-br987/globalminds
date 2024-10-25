@@ -6,6 +6,7 @@ interface AnimatedDivProps {
   className?: string;
   index: number;
   isInView: boolean;
+  onClick?: () => void;
 }
 
 const AnimatedDiv3 = ({
@@ -13,6 +14,7 @@ const AnimatedDiv3 = ({
   className = "",
   index,
   isInView,
+  onClick,
 }: AnimatedDivProps) => {
   const animations = {
     initial: { opacity: 0.1, y: 10 },
@@ -35,6 +37,7 @@ const AnimatedDiv3 = ({
       animate={animations.animate}
       transition={animations.transition}
       className={className}
+      onClick={onClick}
     >
       {children}
     </motion.div>
