@@ -52,7 +52,7 @@ export default function OurTeam({ members }: OurTeamProps) {
             : "/image/banner.png";
           return (
             <div
-              onClick={() => handleMemberClick(index)}
+              onClick={() => handleMemberClick(index)} key={index}
               className="group relative transition-transform cursor-pointer hover:scale-105 "
             >
               <div className="relative w-full aspect-square">
