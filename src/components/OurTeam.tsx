@@ -8,7 +8,6 @@ import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import { client } from "@/sanity/client";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import AnimatedDiv3 from "./small_components/AnimatedDiv3";
 import AnimatedDiv from "./small_components/AnimatedDiv";
 const builder = imageUrlBuilder(client);
 
@@ -21,9 +20,6 @@ interface OurTeamProps {
 }
 
 export default function OurTeam({ members }: OurTeamProps) {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const isInView = useInView(containerRef, { once: false, margin: "-40% 0px" });
-
   const [selectedMember, setSelectedMember] = useState<number | null>(null);
 
   const handleMemberClick = (index: number) => {
