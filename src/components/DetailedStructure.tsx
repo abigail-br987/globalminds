@@ -5,8 +5,6 @@ import { urlFor } from "@/app/lib/displayImage";
 import { formatDate } from "@/app/lib/utils";
 import AnimatedDiv from "./small_components/AnimatedDiv";
 import AnimatedDiv3 from "./small_components/AnimatedDiv3";
-import { useRef } from "react";
-import { useInView } from "framer-motion";
 import { SanityDocument } from "next-sanity";
 
 interface ImageAsset {
@@ -42,7 +40,6 @@ interface ItemsProps {
 
 export default function DetailedStructure({ items }: ItemsProps) {
   const currentDate = new Date();
-
   const processedElements: ProcessedOffering[] = items.map((element) => {
     const isPast = element.time ? new Date(element.time) < currentDate : false;
     const formattedDate = element.time ? formatDate(element.time) : undefined;
@@ -81,9 +78,6 @@ export default function DetailedStructure({ items }: ItemsProps) {
 
   const uniqueTypes = Object.keys(groupedElements);
 
-  const containerRefs = uniqueTypes.map(() => useRef<HTMLDivElement | null>(null));
-  const inViewStates = uniqueTypes.map((_, index) => useInView(containerRefs[index], { once: false, margin: "-40% 0px" }));
-
   if (!items || items.length === 0) {
     return <p>No programs available.</p>;
   }
@@ -101,7 +95,7 @@ export default function DetailedStructure({ items }: ItemsProps) {
           <AnimatedDiv key={type} className="space-y-4">
             <h2 className="text-gbWhite">{type.toUpperCase()}</h2>
             <div
-              ref={containerRefs[index_]}
+              
               className={`grid p-1 ${columnClass} bg-${color} rounded-2xl gap-4 p-3`}
             >
               {groupedElements[type].map((element, index) => {
@@ -123,9 +117,7 @@ export default function DetailedStructure({ items }: ItemsProps) {
                 };
 
                 return (
-                  <AnimatedDiv3 isInView={inViewStates[index_]} index={index} key={index}>
                     <ProgramasComponent {...componentProps} />
-                  </AnimatedDiv3>
                 );
               })}
             </div>
