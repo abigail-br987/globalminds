@@ -128,70 +128,8 @@ export const donateMessage = [
   "Garantizamos que tu donación impactará directamente en la vida de jóvenes latinos.",
   "Te mantendremos informado sobre cómo se usan los fondos para expandir nuestros programas.",
 ];
-export const structureItems = [
-  {
-    title: "Inspirar",
-    description:
-      "Charlas semanales con latinos exitosos para inspirar a los estudiantes y ayudarles a definir sus metas.",
-    figure: (
-      <Figure11
-        color="gbGreen"
-        className="w-10 absolute -rotate-45 z-0 fill-gbBlue"
-      />
-    ),
-  },
-  {
-    title: "Apoyar",
-    description:
-      "Mentoría personalizada para guiar a los estudiantes en sus aplicaciones a concursos, becas y universidades.",
-    figure: (
-      <Figure12
-        color="gbBlue"
-        className="w-10 absolute -rotate-45 z-0  fill-gbRed"
-      />
-    ),
-  },
-  {
-    title: "Preparar",
-    description:
-      "Talleres y capacitaciones para fortalecer los currículums y preparar a los estudiantes para actividades relevantes.",
-    figure: (
-      <Figure12
-        color="gbRed"
-        className="w-10 absolute rotate-45 z-0  fill-gbYellow"
-      />
-    ),
-  },
-  {
-    title: "Conectar",
-    description:
-      "Crear una comunidad de apoyo y networking entre estudiantes y mentores para fomentar la colaboración y el intercambio de experiencias.",
-    figure: <Figure3 className="w-10 absolute -rotate-45 z-0  fill-gbGreen" />,
-  },
-];
 
-export const impactData = [
-  {
-    value: "+23",
-    text: "charlas organizadas con expertos latinos",
-  },
-  {
-    value: "+1145",
-    text: "estudiantes impactados, más oportunidades",
-  },
-  {
-    value: "+35",
-    text: "mentores activos de universidades de prestigio",
-  },
-  {
-    value: "75%",
-    text: "mentees admitidos en programas int. o becas",
-  },
-  {
-    value: "50%",
-    text: "crecimiento mensual en la participación",
-  },
-];
+
 
 export const teamMembers = [
   {
