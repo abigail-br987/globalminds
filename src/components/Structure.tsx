@@ -15,7 +15,7 @@ export const structureItems = [
       "Charlas semanales con latinos exitosos para inspirar a los estudiantes y ayudarles a definir sus metas.",
     figure: (
       <Figure3
-        className="w-10 absolute -rotate-45 z-0 fill-gbYellow"
+        className="w-12 absolute -rotate-45 z-0 fill-gbYellow"
       />
     ),
   },
@@ -25,7 +25,7 @@ export const structureItems = [
       "Mentoría personalizada para guiar a los estudiantes en sus aplicaciones a concursos, becas y universidades.",
     figure: (
       <Figure11
-        className="w-10 absolute -rotate-45 z-0  fill-purple-400"
+        className="w-12 absolute -rotate-45 z-0  fill-purple-400"
       />
     ),
   },
@@ -36,7 +36,7 @@ export const structureItems = [
     figure: (
       <Figure12
         color="gbBlue"
-        className="w-10 absolute -rotate-45 z-0  fill-orange-500"
+        className="w-12 absolute -rotate-45 z-0  fill-orange-500"
       />
     ),
   },
@@ -44,7 +44,7 @@ export const structureItems = [
     title: "Conectar",
     description:
       "Crear una comunidad de apoyo y networking entre estudiantes y mentores para fomentar la colaboración y el intercambio de experiencias.",
-    figure: <Figure12 className="w-10 absolute -rotate-45 z-0  fill-gbGreen" />,
+    figure: <Figure12 className="w-12 absolute -rotate-45 z-0  fill-gbGreen" />,
   },
 ];
 
