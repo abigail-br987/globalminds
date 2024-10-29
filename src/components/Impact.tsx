@@ -51,9 +51,9 @@ function Impact() {
             key={index}
             isInView={isInView}
             index={index}
-            className="bg-gbYellow flex p-4 rounded-lg text-center"
+            className="bg-gbYellow flex space-x-3 text-left items-center justify-center p-4 rounded-lg"
           >
-            <h3 className="text-7xl">
+            <h3 className="text-7xl" style={{ WebkitTextStroke: "2px #2B2B2B",}}>
             {item.value}
             </h3>
             <span>{item.text}</span>
