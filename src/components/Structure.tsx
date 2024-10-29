@@ -72,7 +72,7 @@ function Structure() {
             isInView={isInView}
           >
             <div className="flex items-center justify-center mb-5">
-              <h3 className="z-10 font-gotaRegular" style={{ WebkitTextStroke: "2px #2B2B2B",}} // Adjust as needed
+              <h3 className="z-10 font-gotaRegular lg:text-2xl" style={{ WebkitTextStroke: "2px #2B2B2B",}} 
               >{item.title}</h3>
               {item.figure}
             </div>
