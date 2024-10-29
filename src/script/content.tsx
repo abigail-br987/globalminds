@@ -15,22 +15,28 @@ import {
 
 export const number = "+51 999 999 999"
 export const location = "Lima, Perú"
-export const email = "info@.com"
+export const email = "helloglobalmindslatam@gmail.com"
 
 export const socialLinks = [
   {
-    href: "https://www.linkedin.com",
+    href: "https://www.linkedin.com/company/global-minds-latam/posts/?feedView=all",
     bgColor: "bg-gbBlue",
     text: "Síguenos en LinkedIn",
     icon: <FaLinkedin />,
   },
   {
-    href: "https://www.instagram.com",
+    href: "https://www.instagram.com/global_minds_latam/",
     bgColor: "bg-gsPink",
     text: "Síguenos en Instagram",
     icon: <FaInstagram />,
   },
   {
+    href: `mailto:${email}`,
+    bgColor: "bg-gbYellow",
+    text: "Escríbenos por Email",
+    icon: <FaEnvelope />,
+  },
+ {/*  {
     href: "https://discord.com",
     bgColor: "bg-gsLightPurple",
     text: "Únete a nuestro Discord",
@@ -41,13 +47,7 @@ export const socialLinks = [
     bgColor: "bg-gbGreen",
     text: "Únete a nuestro grupo de WhatsApp",
     icon: <FaWhatsapp />,
-  },
-  {
-    href: `mailto:${email}`,
-    bgColor: "bg-gbYellow",
-    text: "Escríbenos por Email",
-    icon: <FaEnvelope />,
-  },
+  },*/}
 ];
 
 
