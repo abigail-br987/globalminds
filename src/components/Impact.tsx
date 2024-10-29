@@ -44,7 +44,7 @@ function Impact() {
       </p>
       <div
         ref={containerRef}
-        className=" sm:grid items-center max-sm:space-y-6 sm:grid-cols-2 md:grid-cols-3 sm:gap-6 justify-items-center text-gbBlack"
+        className=" sm:grid items-center max-sm:space-y-6 sm:grid-cols-2 md:grid-cols-3 sm:gap-4 justify-items-center text-gbBlack"
       >
         {impactData.map((item, index) => (
           <AnimatedDiv3
