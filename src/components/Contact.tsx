@@ -59,9 +59,9 @@ const Contact: React.FC = () => {
         <div>
           <h3 className="text-lg font-semibold">Información de Contacto</h3>
           <ul className="list-disc pl-5">
-            <li className="flex items-center">
+           {/*  <li className="flex items-center">
               <FaPhoneAlt className="mr-2" /> {number}
-            </li>
+            </li>*/}
             <li className="flex items-center">
               <MdEmail className="mr-2" /> {email}
             </li>
