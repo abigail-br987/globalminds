@@ -7,7 +7,7 @@ interface ColorfulTextProps extends React.HTMLAttributes<HTMLDivElement> {
 const colorClasses = [
   "text-gbBlue",
   "text-gbRed",
-  "text-yellow-500", 
+  "text-gbYellow", 
   "text-gbGreen" ,
 ];
 
