@@ -3,11 +3,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import ButtonWithArrow from "./small_components/ButtonWithArrow";
-import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { location } from "@/script/content";
-import { number } from "@/script/content";
 import SocialIcons from "./SocialIcons";
 import { email } from "@/script/content";
 import { motion } from "framer-motion"; 

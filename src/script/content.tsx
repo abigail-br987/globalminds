@@ -1,6 +1,4 @@
-import Figure11 from "@/svg/Figure11";
-import Figure12 from "@/svg/Figure12";
-import Figure3 from "@/svg/Figure3";
+
 import { PiStudentFill } from "react-icons/pi";
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { IoPersonAddSharp } from "react-icons/io5";
@@ -8,8 +6,6 @@ import { RiUserVoiceFill } from "react-icons/ri";
 import {
   FaLinkedin,
   FaInstagram,
-  FaDiscord,
-  FaWhatsapp,
   FaEnvelope,
 } from "react-icons/fa";
 
