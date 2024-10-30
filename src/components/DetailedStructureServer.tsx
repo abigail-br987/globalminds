@@ -6,7 +6,7 @@ const POSTS_QUERY = `*[
     _type == "offerings" 
   ] | order(time asc)[0...12]`;
 
-const options = { next: { revalidate: 30 } };
+const options = { next: { revalidate: 30 } }; 
 
 async function fetchMembers() {
   try {
