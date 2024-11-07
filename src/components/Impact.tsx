@@ -4,7 +4,7 @@ import AnimatedDiv3 from "./small_components/AnimatedDiv3";
 import AnimatedDiv from "./small_components/AnimatedDiv";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-
+import AnimatedNumber from "./small_components/AnimatedNumber";
 export const impactData = [
   {
     value: "+25",
@@ -44,7 +44,7 @@ function Impact() {
       </p>
       <div
         ref={containerRef}
-        className=" sm:grid items-center max-sm:space-y-6 sm:grid-cols-2 md:grid-cols-3 sm:gap-4 justify-items-center text-gbBlack"
+        className="sm:grid items-center max-sm:space-y-6 sm:grid-cols-2 md:grid-cols-3 sm:gap-4 justify-items-center text-gbBlack"
       >
         {impactData.map((item, index) => (
           <AnimatedDiv3
@@ -53,9 +53,7 @@ function Impact() {
             index={index}
             className="bg-gbYellow flex space-x-3 text-left items-center justify-center p-4 rounded-lg"
           >
-            <h3 className="text-7xl" style={{ WebkitTextStroke: "2px #2B2B2B",}}>
-            {item.value}
-            </h3>
+            <AnimatedNumber targetNumber={parseInt(item.value.replace('+', '').replace('%', ''))} displayValue={item.value} />
             <span>{item.text}</span>
           </AnimatedDiv3>
         ))}
@@ -65,9 +63,6 @@ function Impact() {
           profesionales. Nuestro compromiso es seguir creciendo, llegar a más
           estudiantes y expandir el impacto de nuestra red global.
         </div>
-        {/*
-        <button className="bg-gbWhite text-gbBlack h-max self-center py-4 rounded-xl"> <p> Leer Testimonios </p><FaReadme className="text-3xl m-auto"/> </button>
-      */}{" "}
       </div>
     </AnimatedDiv>
   );
