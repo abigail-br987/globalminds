@@ -5,6 +5,8 @@ import AnimatedDiv from "./small_components/AnimatedDiv";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import AnimatedNumber from "./small_components/AnimatedNumber";
+
+
 export const impactData = [
   {
     value: "+25",
