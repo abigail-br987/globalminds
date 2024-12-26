@@ -2,10 +2,9 @@ import { SanityDocument } from "next-sanity";
 import { client } from "@/sanity/client";
 import DetailedStructure from "./DetailedStructure";
 
-const POSTS_QUERY = `*[ 
-  _type == "offerings" 
+const POSTS_QUERY = `*[
+  _type == "offerings" && (type == "Talleres" || type == "Charlas")
 ] | order(time desc)[0...12]`;
-
 
 const options = { next: { revalidate: 30 } }; 
 
