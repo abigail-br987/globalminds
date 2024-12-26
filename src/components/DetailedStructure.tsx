@@ -61,7 +61,7 @@ export default function DetailedStructure({ items }: ItemsProps) {
 
   processedElements.sort((a, b) => {
     if (a.isPast === b.isPast) {
-      return new Date(a.time || "").getTime() - new Date(b.time || "").getTime();
+      return new Date(b.time || "").getTime() - new Date(a.time || "").getTime();
     }
     return a.isPast ? 1 : -1;
   });

@@ -3,8 +3,9 @@ import { client } from "@/sanity/client";
 import DetailedStructure from "./DetailedStructure";
 
 const POSTS_QUERY = `*[ 
-    _type == "offerings" 
-  ] | order(time desc)[0...12]`;
+  _type == "offerings" 
+] | order(time desc)[0...12]`;
+
 
 const options = { next: { revalidate: 30 } }; 
 
