@@ -9,7 +9,7 @@ const navItems = [
     style: "bg-gbBlue",
     hasDropdown: true,
     dropdownItems: [
-      { name: "Próximos", to: "/proximos" },
+      { name: "Próximos", to: "/proxhimos" },
       { name: "Pasados", to: "/pasados" },
     ],
   },
