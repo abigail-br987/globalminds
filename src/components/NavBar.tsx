@@ -4,7 +4,7 @@ import Link from "next/link";
 const navItems = [
   { name: "Inicio", to: "/", style: "bg-gbGreen" },
   {
-    name: "Eventos",
+    name: "Eventos", 
     to: "/programas",
     style: "bg-gbBlue",
     hasDropdown: true,
