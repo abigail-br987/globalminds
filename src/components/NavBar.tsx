@@ -4,47 +4,69 @@ import Image from "next/image";
 
 const navItems = [
   { name: "Inicio", to: "/", style: "bg-gbGreen" },
-  { name: "Programas", to: "/programas", style: "bg-gbBlue" },
-  { name: "Nosotros", to: "/nosotros", style: "bg-gbRed" },
-  { name: "Contacto", to: "/contacto", style: "bg-gbYellow" },
-  { name: "Blog", to: "/blog", style: "" },
+  {
+    name: "Eventos",
+    to: "/programas",
+    style: "bg-gbBlue",
+    hasDropdown: true,
+    dropdownItems: [
+      { name: "Próximos", to: "/proximos" },
+      { name: "Pasados", to: "/pasados" },
+    ],
+  },
+  {
+    name: "Nosotros",
+    to: "/nosotros",
+    style: "bg-gbRed",
+    hasDropdown: true,
+    dropdownItems: [
+      { name: "Metodo", to: "/metodo" },
+      { name: "Impacto", to: "/impacto" },
+    ],
+  },
+  { name: "Blog", to: "/blog", style: "bg-gbYellow" },
 ];
 
 function NavBar() {
   return (
     <nav
-    className="p-2 pb-10 max-sm:text-sm fixed w-full top-0 z-50 font-mono"
-    style={{
-      background: "linear-gradient(180deg, #2B2B2B 20%, rgba(43, 43, 43, 0.7) 50%, rgba(43, 43, 43, 0) 100%)",
-    }}
-  >
-      <ul className="items-start flex justify-between">
-        <Link href={"/home"} className="max-sm:hidden cursor-pointer flex space-x-3">
-          <div className="py-1 px-2 bg-gbBlack h-max rounded-md space-x-2 font-mono font-bold flex items-center">
-            <Image
-              src={"/logo/mainlogo.png"}
-              alt="Home Logo"
-              layout="responsive"
-              width={50}
-              height={50}
-              className="max-w-5 max-h-5 rounded-full"
-            />
-            <span>GLOBAL MINDS</span>
-          </div>
-        </Link>
-        <div className="max-sm:w-full flex space-x-2 md:space-x-4 py-1 bg-gbBlack z-0 rounded-md px-3">
+      className="pb-10 max-sm:text-sm fixed w-full top-0 z-50 font-mono"
+      style={{
+        background:
+          "linear-gradient(180deg, #2B2B2B 20%, rgba(43, 43, 43, 0.7) 50%, rgba(43, 43, 43, 0) 100%)",
+      }}
+    >
+      <ul className="items-start flex justify-center">
+        <div className="max-sm:w-full flex py-3 bg-gbGray z-0 rounded-b-3xl ">
           {navItems.map((item, index) => (
-            <Link href={item.to} key={index}>
-              <li
-                key={index}
-                className="relative uppercase cursor-pointer text-gbWhite font-bold group"
-              >
-                {item.name}
-                <span
-                  className={`absolute left-0 rounded-sm -bottom-1 h-1.5 w-full ${item.style} -z-10 transition-all duration-300 transform origin-bottom group-hover:h-8`}
-                ></span>
-              </li>{" "}
-            </Link>
+            <div key={index} className="relative group flex items-center">
+              <Link href={item.to}>
+                <li
+                  className={`relative uppercase cursor-pointer font-bold group px-8 transition-opacity duration-300 opacity-50 group-hover:opacity-100`}
+                >
+                  {item.name}
+                </li>
+              </Link>
+
+              {index !== navItems.length - 1 && (
+                <div className="border-r-2 border-gbWhite h-3 "></div> // Vertical line
+              )}
+
+              {item.hasDropdown && (
+                <div className="absolute bg-gbGray pb-2 top-full left-0 w-full text-center rounded-b-3xl shadow-lg mt-2 opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-300">
+                  <ul>
+                    {item.dropdownItems?.map((dropdownItem, idx) => (
+                      <li
+                        key={idx}
+                        className="px-4 py-2 cursor-pointer hover:text-gbYellow"
+                      >
+                        <Link href={dropdownItem.to}>{dropdownItem.name}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
           ))}
         </div>
       </ul>
