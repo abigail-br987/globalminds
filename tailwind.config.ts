@@ -15,6 +15,7 @@ const config: Config = {
         gbWhite: '#F8F8F8',
         gbYellow: '#FBD261',
         gsLightBlue: '#ADDAE9',
+        gbGray: "#505050",
         gsLightPurple: '#ADA3DA',
         gsBrightPink: '#F34F87',
         gsPink: '#F678BE',
