@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import NavHeader from "@/components/navigation/NavHeader";
 
 export const metadata: Metadata = {
   title: "Global Minds",
-  description: "Organization",
+  description: "Non-Profit Organization",
 };
 
 export default function RootLayout({
@@ -13,9 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <head>
-      </head>
-      <body className={`antialiased bg-gbBlack`}>{children}</body>
+      <head />
+      <body className={`antialiased bg-gbBlack`}>
+        <NavHeader />
+        {children}
+      </body>
     </html>
   );
 }
