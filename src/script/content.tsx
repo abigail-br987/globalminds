@@ -238,7 +238,7 @@ export const teamMembers = [
   },
 ];
 
-export const globalMindsColors = ["gbRed", "gbBlue", "gbYellow", "gbGreen"];
+export const globalMindsColors = ["gbGreen", "gbBlue", "gbYellow", "gbGreen"];
 
 export const ourTeamParagraph = [
   "Global Minds no sería posible sin el increíble equipo que lo hace funcionar día a día.",
