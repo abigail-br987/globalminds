@@ -6,6 +6,7 @@ import { urlFor } from "../lib/displayImage";
 import { SanityDocument } from "next-sanity";
 import AnimatedDiv3 from "@/components/small_components/AnimatedDiv3";
 import BlogCard from "@/components/BlogCard";
+import ColorfulTitle from "@/components/small_components/ColorfulTitle";
 interface Props {
   posts: SanityDocument[];
 }
@@ -16,9 +17,8 @@ export default function BlogBlock({ posts }: Props) {
 
   return (
     <div className=" p-8" ref={containerRef}>
-        <h2 className="text-4xl text-gbWhite text-center my-10">
-          ÚLTIMOS BLOGS
-        </h2>
+        <ColorfulTitle text="GM BLOGS" className="my-10 m-auto"/>
+
         <div className="grid grid-cols-12 w-full sm:gap-9 max-sm: max-sm:space-y-6">
           {posts.map((post, index) => {
             const postImageUrl = post.image1
@@ -34,10 +34,8 @@ export default function BlogBlock({ posts }: Props) {
               : undefined;
 
             return (
-              <AnimatedDiv3 isInView={isInView} index={index} key={index} className={`w-full h-full relative ${
-                index < 2
-                  ? "col-span-12 lg:col-span-6 max-sm:aspect-square sm:aspect-video"
-                  : "col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3 aspect-square"
+              <AnimatedDiv3 isInView={isInView} index={index} key={index} className={`w-full h-full relative 
+                  col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3 aspect-square
               }`}>
                 <BlogCard
                   key={post._id}
