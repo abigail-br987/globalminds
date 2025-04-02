@@ -7,14 +7,14 @@ interface ColorfulTextProps extends React.HTMLAttributes<HTMLDivElement> {
 const colorClasses = [
   "text-gbBlue",
   "text-gbRed",
-  "text-gbYellow", 
+  "text-yellow-600", 
   "text-gbGreen" ,
 ];
 
 const ColorfulTitle: React.FC<ColorfulTextProps> = ({ text, className = "", onClick, ...props }) => {
   return (
     <div 
-      className={`bg-gbWhite w-fit px-10 text-4xl font-bold py-2 rounded-lg text-gbBlack ${className}`}
+      className={`bg-gbWhite px-4 text-4xl tracking-widest font-bold py-2 rounded-lg text-gbBlack ${className}`}
       onClick={onClick} 
       {...props}
     >
