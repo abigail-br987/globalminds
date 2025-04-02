@@ -34,7 +34,7 @@ const AnimatedNumber: React.FC<{ targetNumber: number, displayValue: string }> =
       transition={{ duration: 0.5, type: "spring" }}
     >
       <motion.span
-        style={{ fontSize: "2rem", fontWeight: "bold" }}
+        style={{ fontSize: "3rem", fontWeight: "bold" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: isInView ? 1 : 0.7 }}
         transition={{ duration: 0.5, type: "spring" }}
