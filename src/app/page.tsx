@@ -1,5 +1,4 @@
 import Landing from "@/components/Landing";
-import NavBar from "@/components/NavBar";
 import Structure from "@/components/Structure";
 import Photos from "@/components/Photos";
 import Figures from "@/components/Figures";
@@ -12,7 +11,6 @@ import Presentation from "@/components/Presentation";
 function Home() {
   return (
     <div className="flex flex-col justify-center items-center m-auto bg-gbBlack">
-      <NavBar />
       <Figures />
       <Landing />
     <div className="max-w-screen-xl p-10 z-10 space-y-28">
