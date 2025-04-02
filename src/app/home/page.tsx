@@ -1,5 +1,4 @@
 import Landing from "@/components/Landing";
-import NavBar from "@/components/NavBar";
 import Structure from "@/components/Structure";
 import Photos from "@/components/Photos";
 import Figures from "@/components/Figures";
@@ -10,28 +9,20 @@ import Footer from "@/components/Footer";
 import Presentation from "@/components/Presentation";
 
 
-
-
 function Home() {
   return (
     <div className="flex flex-col justify-center items-center m-auto bg-gbBlack">
-      <NavBar />
-      <Figures />
-      <Landing />
+
+
+      {/*  <Landing />
+
     <div className="max-w-screen-xl p-10 z-10 space-y-10">
        <Presentation/>
-       <Photos
-          images={[
-            "https://placehold.co/600x400",
-            "https://placehold.co/700x400",
-          ]}
-        /> 
-        <Structure /> 
-        <Impact />
         <JoinUs /> 
         <Donate />
       </div> 
-      <Footer />
+     
+      <Footer /> */}
     </div>
   );
 }
