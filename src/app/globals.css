@@ -7,7 +7,7 @@
     @apply text-8xl font-bold font-lucidity; 
   }
   h2 {
-    @apply text-xl md:text-3xl font-semibold ; 
+    @apply text-xl md:text-3xl font-semibold tracking-widest ; 
   }
   h3 {
     @apply text-lg leading-4 font-bold font-mono tracking-wide; 
