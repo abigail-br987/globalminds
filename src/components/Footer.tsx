@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import SocialIcons from "./SocialIcons";
 import Link from "next/link";
 
@@ -13,26 +13,15 @@ function Footer() {
       <div className=" space-y-5 flex flex-col text-center items-center max-sm:w-full justify-center">
         <h3>GLOBAL MINDS</h3>
         <ul className="flex space-x-5">
-        <Link href="/" key={0}>
-            <li className="cursor-pointer"
-            >
-              INICIO
-            </li>
+          <Link href="/" key={0}>
+            <li className="cursor-pointer">INICIO</li>
           </Link>
           <Link href="/programas" key={1}>
-            <li className="cursor-pointer"
-            >
-              PROGRAMAS
-            </li>
+            <li className="cursor-pointer">PROGRAMAS</li>
           </Link>
           <Link href="/contacto" key={2}>
-            <li className="cursor-pointer"
-            >
-              CONTACTO
-            </li>
+            <li className="cursor-pointer">CONTACTO</li>
           </Link>
-
-
         </ul>
         <SocialIcons />
       </div>

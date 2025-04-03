@@ -1,4 +1,3 @@
-
 export const animations = {
   sectionVariant: {
     offscreen: {

@@ -14,12 +14,17 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
       <div
         className="fixed inset-0 w-screen h-screen bg-gbBlack bg-opacity-90"
         onClick={onClose}
-      >
-      </div>
+      ></div>
       <div className="fixed inset-0 flex items-center justify-center text-gbBlack">
         <div className="bg-white rounded-lg shadow-lg p-4 max-w-md mx-auto">
-          <IoMdCloseCircle className="text-4xl absolute text-gbWhite cursor-pointer top-2 right-2" onClick={onClose}/>
-          <IoMdCloseCircle className="text-4xl text-gbBlack cursor-pointer" onClick={onClose}/>
+          <IoMdCloseCircle
+            className="text-4xl absolute text-gbWhite cursor-pointer top-2 right-2"
+            onClick={onClose}
+          />
+          <IoMdCloseCircle
+            className="text-4xl text-gbBlack cursor-pointer"
+            onClick={onClose}
+          />
           {children}
         </div>
       </div>

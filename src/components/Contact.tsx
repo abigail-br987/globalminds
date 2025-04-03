@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState } from "react";
 import axios from "axios";
@@ -8,7 +7,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { location } from "@/script/content";
 import SocialIcons from "./SocialIcons";
 import { email } from "@/script/content";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +18,7 @@ const Contact: React.FC = () => {
   const [status, setStatus] = useState("");
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,
@@ -30,7 +29,7 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/contact', formData);
+      const response = await axios.post("/api/contact", formData);
       if (response.data.success) {
         setStatus("Message sent");
       } else {
@@ -48,7 +47,7 @@ const Contact: React.FC = () => {
         className="space-y-3"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1}}
+        transition={{ duration: 1 }}
       >
         <header>
           <h2 className="mb-3">¡Queremos Conocerte!</h2>
@@ -57,7 +56,7 @@ const Contact: React.FC = () => {
         <div>
           <h3 className="text-lg font-semibold">Información de Contacto</h3>
           <ul className="list-disc pl-5">
-           {/*  <li className="flex items-center">
+            {/*  <li className="flex items-center">
               <FaPhoneAlt className="mr-2" /> {number}
             </li>*/}
             <li className="flex items-center">
@@ -75,7 +74,7 @@ const Contact: React.FC = () => {
         className="text-gbBlack"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay:0.2}}
+        transition={{ duration: 1, delay: 0.2 }}
       >
         <div className="py-3 flex flex-col">
           <input
@@ -113,12 +112,18 @@ const Contact: React.FC = () => {
           />
         </div>
         <div className="float-right">
-          <ButtonWithArrow className="bg-gbGreen">
-            Send Message
-          </ButtonWithArrow>
+          <ButtonWithArrow className="bg-gbGreen">Send Message</ButtonWithArrow>
         </div>
       </motion.form>
-      {status && <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>{status}</motion.p>}
+      {status && (
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          {status}
+        </motion.p>
+      )}
     </section>
   );
 };

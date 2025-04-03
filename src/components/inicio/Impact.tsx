@@ -26,25 +26,26 @@ export const impactData = [
 ];
 
 function Impact() {
-
   return (
     <AnimatedDiv className="hyphens-auto text-gbWhite space-y-6">
-      <ColorfulTitle text="IMPACTO" className="w-fit mx-auto"/>
+      <ColorfulTitle text="IMPACTO" className="w-fit mx-auto" />
 
       <p>
-        Ofrecemos asesoría gratuita valorada en $10,000 y creamos un
-        espacio seguro y accesible para que los jóvenes latinos sueñen en
-        grande.
+        Ofrecemos asesoría gratuita valorada en $10,000 y creamos un espacio
+        seguro y accesible para que los jóvenes latinos sueñen en grande.
       </p>
-      <div
-        className="sm:grid items-center max-sm:space-y-6 sm:grid-cols-2 sm:gap-4 justify-items-center text-gbBlack"
-      >
+      <div className="sm:grid items-center max-sm:space-y-6 sm:grid-cols-2 sm:gap-4 justify-items-center text-gbBlack">
         {impactData.map((item, index) => (
           <div
             key={index}
             className="bg-gbYellow w-full flex space-x-3 text-left items-center justify-center p-4 rounded-lg"
           >
-            <AnimatedNumber targetNumber={parseInt(item.value.replace('+', '').replace('%', ''))} displayValue={item.value} />
+            <AnimatedNumber
+              targetNumber={parseInt(
+                item.value.replace("+", "").replace("%", ""),
+              )}
+              displayValue={item.value}
+            />
             <span>{item.text}</span>
           </div>
         ))}

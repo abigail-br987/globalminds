@@ -13,10 +13,10 @@ const Photos: React.FC<PhotosProps> = ({ images }) => {
           images.length === 1
             ? "sm:columns-1"
             : images.length === 2
-            ? "sm:columns-2"
-            : images.length === 3 || images.length > 3
-            ? "sm:columns-3"
-            : ""
+              ? "sm:columns-2"
+              : images.length === 3 || images.length > 3
+                ? "sm:columns-3"
+                : ""
         }`}
       >
         {images.map((src, idx) => {
@@ -25,8 +25,8 @@ const Photos: React.FC<PhotosProps> = ({ images }) => {
             randomChoice === 0
               ? "rotate-1"
               : randomChoice === 1
-              ? "-rotate-1"
-              : "";
+                ? "-rotate-1"
+                : "";
           const randomColor =
             globalMindsColors[
               Math.floor(Math.random() * globalMindsColors.length)
@@ -34,20 +34,21 @@ const Photos: React.FC<PhotosProps> = ({ images }) => {
           console.log(randomColor);
           return (
             <AnimatedDiv2 key={idx}>
-            <Image
-              key={idx}
-              className={`w-full max-h-96 h-auto object-cover rounded-lg shadow-lg border-[10px] ${rotationClass} border-${randomColor}`}
-              src={src} 
-              layout="responsive"
-              width={100}
-              height={100}
-              alt={`Image ${idx + 1}`}
-            /> </AnimatedDiv2>
+              <Image
+                key={idx}
+                className={`w-full max-h-96 h-auto object-cover rounded-lg shadow-lg border-[10px] ${rotationClass} border-${randomColor}`}
+                src={src}
+                layout="responsive"
+                width={100}
+                height={100}
+                alt={`Image ${idx + 1}`}
+              />{" "}
+            </AnimatedDiv2>
           );
         })}
       </div>
     </AnimatedDiv>
   );
-}
+};
 
 export default Photos;

@@ -1,7 +1,7 @@
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/navigation/NavBar";
 import Footer from "@/components/Footer";
 import Header from "@/components/small_components/Header";
-import DetailedStructureServer from "@/components/DetailedStructureServer";
+import DetailedStructureServer from "@/components/programs/DetailedStructureServer";
 function Programas() {
   return (
     <div className="flex flex-col justify-center items-center m-auto bg-gbBlack">
