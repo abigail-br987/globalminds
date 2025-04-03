@@ -1,6 +1,3 @@
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
-import OurTeamServer from "@/components/areas/OurTeamServer";
 import FollowUs from "@/components/FollowUs";
 import Header from "@/components/small_components/Header";
 import Figures2 from "@/components/figures/Figures2";
@@ -12,16 +9,8 @@ export default async function Nosotros() {
     <>
       <div className="z-50">
         <Header image={banner} />
-        <NavBar />
-
-        <div className="p-6">
-          <OurTeamServer />
-        </div>
         <FollowUs />
-
-        <Footer />
       </div>
-
       <Figures2 />
     </>
   );
