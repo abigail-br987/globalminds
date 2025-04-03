@@ -1,26 +1,30 @@
 import Landing from "@/components/inicio/Landing";
-import Structure from "@/components/Structure";
-import Photos from "@/components/Photos";
-import Figures from "@/components/Figures";
-import JoinUs from "@/components/JoinUs";
-import Donate from "@/components/Donate";
-import Impact from "@/components/Impact";
-import Footer from "@/components/Footer";
+import Structure from "@/components/inicio/Structure";
+import Figures from "@/components/figures/Figures";
+import JoinUs from "@/components/inicio/JoinUs";
+import Donate from "@/components/inicio/Donate";
+import Impact from "@/components/inicio/Impact";
 import Presentation from "@/components/inicio/Presentation";
+import Mission from "@/components/inicio/Mission";
+import Vision from "@/components/inicio/Vision";
 
 function Home() {
   return (
-    <div className="flex flex-col justify-center items-center m-auto bg-gbBlack">
-      {/*  <Landing />
-
-    <div className="max-w-screen-xl p-10 z-10 space-y-10">
-       <Presentation/>
-        <JoinUs /> 
+    <>
+      <Figures />
+      <Landing />
+      <div className="max-w-screen-md m-auto p-10 space-y-20">
+        <Presentation />
+        <div className="flex text-center gap-6">
+          <Mission />
+          <Vision />
+        </div>
+        <Structure />
+        <Impact />
+        <JoinUs />
         <Donate />
-      </div> 
-     
-      <Footer /> */}
-    </div>
+      </div>
+    </>
   );
 }
 

@@ -1,6 +1,4 @@
-
-
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/navigation/NavBar";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 const Contacto = () => {
@@ -10,7 +8,10 @@ const Contacto = () => {
         className="w-full h-64 bg-cover bg-center flex justify-center items-center"
         style={{ backgroundImage: `url(${"/images/banner.png"})` }}
       >
-        <h1 style={{ textShadow: "3px 3px 2px rgba(2, 2, 2, 2)" }} className="max-sm:text-lg">
+        <h1
+          style={{ textShadow: "3px 3px 2px rgba(2, 2, 2, 2)" }}
+          className="max-sm:text-lg"
+        >
           CONTÁCTANOS
         </h1>
       </div>

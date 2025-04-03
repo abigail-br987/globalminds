@@ -45,12 +45,9 @@ export default async function PostPage({
       )}
       <h2 className="break-all">{post.title}</h2>
       <div className="max-w-full break-all">
-        <h5>
-          Publicado: {new Date(post.publishedAt).toLocaleDateString()}
-        </h5>
+        <h5>Publicado: {new Date(post.publishedAt).toLocaleDateString()}</h5>
 
         {Array.isArray(post.body) && <PortableText value={post.body} />}
-
       </div>
     </main>
   );
