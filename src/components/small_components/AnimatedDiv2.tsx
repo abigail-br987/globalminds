@@ -7,21 +7,29 @@ interface AnimatedDivProps {
   className?: string;
   isInViewContainer?: boolean;
 }
-const AnimatedDiv2 = ({ children, className = "", isInViewContainer }: AnimatedDivProps) => {
+const AnimatedDiv2 = ({
+  children,
+  className = "",
+  isInViewContainer,
+}: AnimatedDivProps) => {
   const ref = useRef<HTMLDivElement | null>(null);
-  const isInViewContainer_ = useInView(ref, { once: false, margin: "-40% 0px" })
-  const isInView = isInViewContainer !== undefined ? isInViewContainer : isInViewContainer_ ;
+  const isInViewContainer_ = useInView(ref, {
+    once: false,
+    margin: "-40% 0px",
+  });
+  const isInView =
+    isInViewContainer !== undefined ? isInViewContainer : isInViewContainer_;
 
   return (
     <motion.div
       ref={ref}
       initial={{ x: 10, rotate: -2, scale: 0.95 }}
-      animate={{ 
+      animate={{
         x: isInView ? 0 : 10,
         scale: isInView ? 1 : 0.95,
-        rotate: isInView ? 0 : -2
+        rotate: isInView ? 0 : -2,
       }}
-      transition={{ 
+      transition={{
         duration: 0.6,
         type: "spring",
         stiffness: 300,

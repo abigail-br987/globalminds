@@ -9,7 +9,13 @@ type ButtonProps = {
   iconPosition?: "left" | "right";
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-function Button1({ children, className = "", icon: Icon, iconPosition = "left", ...props }: ButtonProps) {
+function Button1({
+  children,
+  className = "",
+  icon: Icon,
+  iconPosition = "left",
+  ...props
+}: ButtonProps) {
   return (
     <button
       className={`uppercase shadow rounded-full flex items-center gap-2 px-4 py-2 ${className}`}

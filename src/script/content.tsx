@@ -1,17 +1,12 @@
-
 import { PiStudentFill } from "react-icons/pi";
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { IoPersonAddSharp } from "react-icons/io5";
 import { RiUserVoiceFill } from "react-icons/ri";
-import {
-  FaLinkedin,
-  FaInstagram,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
 
-export const number = "+51 999 999 999"
-export const location = "Lima, Perú"
-export const email = "helloglobalmindslatam@gmail.com"
+export const number = "+51 999 999 999";
+export const location = "Lima, Perú";
+export const email = "helloglobalmindslatam@gmail.com";
 
 export const socialLinks = [
   {
@@ -32,7 +27,8 @@ export const socialLinks = [
     text: "Escríbenos por Email",
     icon: <FaEnvelope />,
   },
- {/*  {
+  {
+    /*  {
     href: "https://discord.com",
     bgColor: "bg-gsLightPurple",
     text: "Únete a nuestro Discord",
@@ -43,14 +39,14 @@ export const socialLinks = [
     bgColor: "bg-gbGreen",
     text: "Únete a nuestro grupo de WhatsApp",
     icon: <FaWhatsapp />,
-  },*/}
+  },*/
+  },
 ];
-
 
 export const joinOptions = [
   {
     title: "Únete como Mentee",
-    icon: <PiStudentFill />, 
+    icon: <PiStudentFill />,
     description:
       "Si eres un joven latino que busca recursos, mentoría personalizada y oportunidades para acceder a universidades y programas internacionales, Global Minds es para ti.",
     offerings: [
@@ -67,7 +63,7 @@ export const joinOptions = [
   },
   {
     title: "Únete como Mentor",
-    icon: <FaChalkboardTeacher />,  // Icon for Mentor
+    icon: <FaChalkboardTeacher />, // Icon for Mentor
     description:
       "Si eres un profesional o estudiante avanzado que desea guiar a la próxima generación de jóvenes latinos, Global Minds te ofrece la oportunidad de hacer una diferencia.",
     offerings: [
@@ -85,7 +81,7 @@ export const joinOptions = [
   },
   {
     title: "Únete como Ponente",
-    icon: <IoPersonAddSharp />,  // Icon for Speaker
+    icon: <IoPersonAddSharp />, // Icon for Speaker
     description:
       "Si has tenido éxito en tu campo y quieres inspirar a otros jóvenes con tu historia, únete como ponente en nuestras charlas semanales.",
     offerings: [
@@ -102,7 +98,7 @@ export const joinOptions = [
   },
   {
     title: "Únete como Staff",
-    icon: <RiUserVoiceFill />,  // Icon for Staff
+    icon: <RiUserVoiceFill />, // Icon for Staff
     description:
       "Si te apasiona la educación, el empoderamiento juvenil y la organización de eventos, Global Minds busca personas comprometidas.",
     offerings: [
@@ -125,116 +121,132 @@ export const donateMessage = [
   "Te mantendremos informado sobre cómo se usan los fondos para expandir nuestros programas.",
 ];
 
-
-
 export const teamMembers = [
   {
     name: "Name of Person 1",
     position: "Position 1",
     image: "path/to/image1.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Name of Person 2",
     position: "Position 2",
     image: "path/to/image2.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Name of Person 3",
     position: "Position 3",
     image: "path/to/image3.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Name of Person 4",
     position: "Position 4",
     image: "path/to/image4.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Name of Person 5",
     position: "Position 1",
     image: "path/to/image5.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Name of Person 6",
     position: "Position 2",
     image: "path/to/image6.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Name of Person 7",
     position: "Position 3",
     image: "path/to/image7.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Name of Person 8",
     position: "Position 4",
     image: "path/to/image8.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Name of Person 9",
     position: "Position 1",
     image: "path/to/image9.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Name of Person 10",
     position: "Position 2",
     image: "path/to/image10.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Name of Person 11",
     position: "Position 3",
     image: "path/to/image11.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Name of Person 12",
     position: "Position 4",
     image: "path/to/image12.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Name of Person 13",
     position: "Position 1",
     image: "path/to/image13.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Name of Person 14",
     position: "Position 2",
     image: "path/to/image14.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Name of Person 15",
     position: "Position 3",
     image: "path/to/image15.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Name of Person 16",
     position: "Position 4",
     image: "path/to/image16.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Name of Person 17",
     position: "Position 4",
     image: "path/to/image17.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Name of Person 18",
     position: "Position 4",
     image: "path/to/image18.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 ];
 
@@ -276,7 +288,7 @@ export const programs: Program[] = [
         speaker: "fewfwe",
         date: "fewfwe",
         description: "fefwefe",
-        linkName : "fewfwefew",
+        linkName: "fewfwefew",
         url: "fewfew",
       },
       {
@@ -285,7 +297,7 @@ export const programs: Program[] = [
         speaker: "fewfwe",
         date: "fewfwe",
         description: "fefwefe",
-        linkName : "fewfwefew",
+        linkName: "fewfwefew",
         url: "fewfew",
       },
       {
@@ -294,7 +306,7 @@ export const programs: Program[] = [
         speaker: "fewfwe",
         date: "fewfwe",
         description: "fefwefe",
-        linkName : "fewfwefew",
+        linkName: "fewfwefew",
         url: "fewfew",
       },
       {
@@ -303,7 +315,7 @@ export const programs: Program[] = [
         speaker: "fewfwe",
         date: "fewfwe",
         description: "fefwefe",
-        linkName : "fewfwefew",
+        linkName: "fewfwefew",
         url: "fewfew",
       },
     ],
@@ -367,7 +379,6 @@ export const programs: Program[] = [
         url: "fewfwe",
         linkName: "fewfw",
       },
-  
     ],
   },
   {

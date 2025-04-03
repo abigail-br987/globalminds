@@ -11,7 +11,9 @@ export const structureItems = [
     title: "INSPIRAR",
     description:
       "Charlas semanales con latinos exitosos para inspirar a los estudiantes y ayudarles a definir sus metas.",
-    figure: <Figure3 className="w-12 mx-auto absolute -rotate-45 z-0 fill-gbYellow" />,
+    figure: (
+      <Figure3 className="w-12 mx-auto absolute -rotate-45 z-0 fill-gbYellow" />
+    ),
   },
   {
     title: "APOYAR",
@@ -36,7 +38,9 @@ export const structureItems = [
     title: "CONECTAR",
     description:
       "Crear una comunidad de apoyo y networking entre estudiantes y mentores para fomentar la colaboración y el intercambio de experiencias.",
-    figure: <Figure12 className="w-12 mx-auto  absolute -rotate-45 z-0  fill-gbGreen" />,
+    figure: (
+      <Figure12 className="w-12 mx-auto  absolute -rotate-45 z-0  fill-gbGreen" />
+    ),
   },
 ];
 
@@ -47,10 +51,8 @@ function Structure() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-center">
         {structureItems.map((item, index) => (
           <div key={index} className="flex flex-col justify-content">
-
             <div className="flex items-center mt-2 justify-center mb-5">
-              <h2 className="z-10">{item.title}</h2>            {item.figure}
-
+              <h2 className="z-10">{item.title}</h2> {item.figure}
             </div>
             <p className="text-justify">{item.description}</p>
           </div>

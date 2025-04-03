@@ -1,9 +1,9 @@
 interface Props {
-    className?: string;
+  className?: string;
 }
 
 const LogoBrain: React.FC<Props> = ({ className }) => {
-    return (
+  return (
     <>
       <svg
         id="Layer_2"
@@ -126,7 +126,6 @@ const LogoBrain: React.FC<Props> = ({ className }) => {
       </svg>
     </>
   );
-}
+};
 
-
-export default LogoBrain
+export default LogoBrain;

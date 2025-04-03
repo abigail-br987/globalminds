@@ -2,7 +2,10 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 
-const AnimatedNumber: React.FC<{ targetNumber: number, displayValue: string }> = ({ targetNumber, displayValue }) => {
+const AnimatedNumber: React.FC<{
+  targetNumber: number;
+  displayValue: string;
+}> = ({ targetNumber, displayValue }) => {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref, { once: true, margin: "-10% 0px" });
@@ -40,7 +43,7 @@ const AnimatedNumber: React.FC<{ targetNumber: number, displayValue: string }> =
         transition={{ duration: 0.5, type: "spring" }}
       >
         {count}
-        {displayValue.includes('%') ? "%" : ""}
+        {displayValue.includes("%") ? "%" : ""}
       </motion.span>
     </motion.div>
   );

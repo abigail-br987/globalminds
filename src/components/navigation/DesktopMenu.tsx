@@ -41,8 +41,10 @@ export default function DesktopMenu({ menuItem }) {
       onHoverEnd={toggleHoverMenu}
       key={menuItem.name}
     >
-      <span className="flex items-center uppercase gap-1 hover:bg-white/5 cursor-pointer
-       px-4 py-3 ">
+      <span
+        className="flex items-center uppercase gap-1 hover:bg-white/5 cursor-pointer
+       px-4 py-3 "
+      >
         {menuItem.name}
         {hasSubMenu && (
           <ChevronDown className="mt-[0.6px] group-hover/link:rotate-180 duration-200" />
@@ -62,8 +64,8 @@ export default function DesktopMenu({ menuItem }) {
               menuItem.gridCols === 3
                 ? "grid-cols-3"
                 : menuItem.gridCols === 2
-                ? "grid-cols-2"
-                : "grid-cols-1"
+                  ? "grid-cols-2"
+                  : "grid-cols-1"
             }`}
           >
             {hasSubMenu &&

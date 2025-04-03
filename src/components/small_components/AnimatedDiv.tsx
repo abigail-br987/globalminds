@@ -15,12 +15,12 @@ const AnimatedDiv = ({ children, className = "" }: AnimatedDivProps) => {
     <motion.div
       ref={ref}
       initial={{ opacity: 0.6, scale: 0.95, y: 20 }}
-      animate={{ 
-        opacity: isInView ? 1 : 0.6, 
-        scale: isInView ? 1 : 0.95, 
+      animate={{
+        opacity: isInView ? 1 : 0.6,
+        scale: isInView ? 1 : 0.95,
         y: isInView ? 0 : 20,
       }}
-      transition={{ 
+      transition={{
         duration: 0.6,
         type: "spring",
         stiffness: 300,
