@@ -1,9 +1,9 @@
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   const { name, email, message } = await req.json();
   const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
+    host: "smtp.gmail.com",
     port: 587,
     secure: false,
     auth: {
@@ -15,7 +15,7 @@ export async function POST(req: Request) {
   const mailOptions = {
     from: `"${name}" <${email}>`,
     to: process.env.EMAIL_RECEIVER,
-    subject: 'New Contact Form Submission',
+    subject: "New Contact Form Submission",
     text: message,
     html: `<p>You have a new contact form submission from ${name} (${email}):</p><p>${message}</p>`,
   };
@@ -24,7 +24,7 @@ export async function POST(req: Request) {
     await transporter.sendMail(mailOptions);
     return new Response(JSON.stringify({ success: true }), { status: 200 });
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error("Error sending email:", error);
     return new Response(JSON.stringify({ success: false }), { status: 500 });
   }
 }
