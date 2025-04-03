@@ -1,5 +1,5 @@
 interface Props {
-    className?: string;
+  className?: string;
 }
 
 const Figure4: React.FC<Props> = ({ className }) => {
@@ -26,6 +26,6 @@ const Figure4: React.FC<Props> = ({ className }) => {
       </g>
     </svg>
   );
-}
+};
 
 export default Figure4;
