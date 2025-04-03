@@ -4,7 +4,6 @@ import { useState } from "react";
 import ButtonWithArrow from "../small_components/ButtonWithArrow";
 import Modal from "../Modal";
 import AnimatedDiv3 from "../small_components/AnimatedDiv3";
-import AnimatedDiv from "../small_components/AnimatedDiv";
 import ColorfulTitle from "../small_components/ColorfulTitle";
 import { globalMindsColors } from "@/script/content";
 import { useRef } from "react";

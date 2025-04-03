@@ -8,7 +8,7 @@ const dummyPost = {
   body: "This is a dummy post body with sample text.",
 };
 
-export default function PostPage({ params }: { params: { slug: string } }) {
+export default function PostPage({}: { params: { slug: string } }) {
   const post = dummyPost;
   const postImageUrl = post.image1;
 

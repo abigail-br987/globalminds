@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
-import { MenuItem } from "./menuItems";
 
 export default function DesktopMenu({ menuItem }) {
   const [isHover, toggleHover] = useState(false);

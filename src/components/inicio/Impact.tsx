@@ -1,9 +1,6 @@
 "use client";
 import ColorfulTitle from "../small_components/ColorfulTitle";
-import AnimatedDiv3 from "../small_components/AnimatedDiv3";
 import AnimatedDiv from "../small_components/AnimatedDiv";
-import { useRef } from "react";
-import { useInView } from "framer-motion";
 import AnimatedNumber from "../small_components/AnimatedNumber";
 
 export const impactData = [
