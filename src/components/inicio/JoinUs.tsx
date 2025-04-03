@@ -32,7 +32,7 @@ const JoinUs: React.FC = () => {
 
   return (
     <div>
-      <ColorfulTitle text="UNETE" className="w-fit mx-auto"/>
+      <ColorfulTitle text="UNETE" className="w-fit mx-auto" />
 
       <div className="mt-6 mb-10 space-y-4 rounded text-gbWhite hyphens-auto">
         <div
@@ -50,8 +50,10 @@ const JoinUs: React.FC = () => {
               }`}
             >
               <div className={"flex-1"}>
-                <div className="rounded-full absolute -right-2 -top-1
-                 float-right p-2 text-4xl border-2 border-gbBlack bg-gbWhite">
+                <div
+                  className="rounded-full absolute -right-2 -top-1
+                 float-right p-2 text-4xl border-2 border-gbBlack bg-gbWhite"
+                >
                   {option.icon}
                 </div>
                 <div className="flex items-center justify-between space-x-2">

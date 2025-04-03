@@ -110,8 +110,8 @@ function Landing() {
             </motion.span>
           ))}
         </h1>
-    </div>
-    <motion.span
+      </div>
+      <motion.span
         initial="hidden"
         animate="visible"
         variants={animations.showDelayed}
@@ -127,7 +127,6 @@ function Landing() {
       >
         ↓
       </motion.span>
-
     </div>
   );
 }
