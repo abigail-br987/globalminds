@@ -4,61 +4,62 @@
 
 @layer base {
   h1 {
-    @apply text-8xl font-bold font-lucidity; 
+    @apply text-8xl font-bold font-lucidity;
   }
   h2 {
-    @apply text-xl md:text-3xl font-semibold tracking-widest ; 
+    @apply text-xl md:text-3xl font-semibold tracking-widest;
   }
   h3 {
-    @apply text-lg leading-4 font-bold font-mono tracking-wide; 
+    @apply text-lg leading-4 font-bold font-mono tracking-wide;
   }
   h4 {
-    @apply text-base font-semibold font-mono tracking-wide; 
+    @apply text-base font-semibold font-mono tracking-wide;
   }
   h5 {
-    @apply uppercase text-sm font-semibold; 
+    @apply uppercase text-sm font-semibold;
   }
   button {
-    @apply px-4 py-1 my-2 font-semibold rounded-full; 
+    @apply px-4 py-1 my-2 font-semibold rounded-full;
   }
   p {
-    @apply leading-5 my-1
+    @apply leading-5 my-1;
   }
   body {
-    @apply font-rubik text-gbWhite
+    @apply font-rubik text-gbWhite;
   }
-  input, textarea {
-    @apply accent-gbRed caret-gbGreen outline-gbGreen
+  input,
+  textarea {
+    @apply accent-gbRed caret-gbGreen outline-gbGreen;
   }
 }
 
 @font-face {
-  font-family: 'Lucidity';
-  src: url('/fonts/lucidity.ttf') format('truetype');
+  font-family: "Lucidity";
+  src: url("/fonts/lucidity.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'GotaRegular';
-  src: url('/fonts/gotaregular3.ttf') format('truetype');
+  font-family: "GotaRegular";
+  src: url("/fonts/gotaregular3.ttf") format("truetype");
   font-weight: bold;
 }
 
 @font-face {
-  font-family: 'GotaLight';
-  src: url('/fonts/gotalight.ttf') format('truetype');
+  font-family: "GotaLight";
+  src: url("/fonts/gotalight.ttf") format("truetype");
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Rubik';
-  src: url('/fonts/Rubik-Regular.ttf') format('truetype');
+  font-family: "Rubik";
+  src: url("/fonts/Rubik-Regular.ttf") format("truetype");
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Rubik-medium';
-  src: url('/fonts/Rubik-Medium.ttf') format('truetype');
+  font-family: "Rubik-medium";
+  src: url("/fonts/Rubik-Medium.ttf") format("truetype");
   font-style: normal;
 }
